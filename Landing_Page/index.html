@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+
+<html lang="en" data-theme="corporate-dark" data-assets-path="./assets/" class="wnrde">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+
+    <meta name="robots" content="index, follow" />
+
+    <title>Bopadi - Book Flights, Rides & Hotels on WhatsApp</title>
+
+    <meta name="keywords"
+        content="Bopadi, Booking Padi, WhatsApp travel bot, book flight on WhatsApp, flight booking Nigeria, hotel booking WhatsApp, WhatsApp ride booking, travel assistant Nigeria, book hotel, WhatsApp chatbot booking" />
+
+    <meta name="description"
+        content="Bopadi (Booking Padi) is your WhatsApp travel assistant for booking flights, rides, and hotels in Nigeria. Chat, compare, and book — all from WhatsApp!" />
+
+    <meta property="og:title" content="Bopadi - Book Flights, Rides & Hotels on WhatsApp" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://bopadi.app/" />
+    <meta property="og:image" content="https://bopadi.app/assets/images/bopadi-preview.png" />
+    <meta property="og:description"
+        content="Your friendly Booking Padi on WhatsApp — book flights, rides, and hotels instantly. Smart, simple, and made for Nigerians." />
+    <meta property="og:site_name" content="Bopadi" />
+
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Bopadi - Your Travel Padi on WhatsApp" />
+    <meta name="twitter:description"
+        content="Book flights, rides, and hotels directly from WhatsApp with Bopadi — your smart travel padi in Nigeria." />
+    <meta name="twitter:image" content="https://bopadi.app/assets/images/bopadi-preview.png" />
+
+
+    <link rel="canonical" href="https://bopadi.app/" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="./assets/images/bopadi_logo.png" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css?family=Archivo:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css?family=Fira+Code:wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet" />
+
+    <link rel="stylesheet" href="./assets/output.css" />
+
+    <style>
+        .logo_img {
+            width: 250px;
+        }
+
+        @media (max-width: 500px) {
+            .logo_img {
+                width: 200px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg-base-100">
+        <header
+            class="qqtj1 max-sm:bg-base-100 intersect-once intersect:motion-preset-slide-down-lg intersect:motion-duration-800 intersect:motion-opacity-in-0 intersect:motion-delay-100 fixed top-0 f39un w-full transition-all duration-300"
+            id="header">
+            <nav class="p2a3b max-w-[1280px] bd5zv jseqn e6j53 b49hy sm:px-6 lg:px-8">
+                <div class="w-full max-md:my-4 md:flex md:h-16 md:items-center md:gap-2">
+                    <div class="lvvmp items-center justify-between max-md:w-full">
+                        <a class="text-base-content flex items-center gap-3 ehpxe j05ae" href="#">
+                            <img src="./assets/images/bopadi_logo.png" class="logo_img" alt="">
+                        </a>
+                        <div class="flex items-center f9dzb md:hidden">
+                            <button type="button" class="collapse-toggle btn pqebt kt9dk btn-square"
+                                data-collapse="#navbar-block-4" aria-controls="navbar-block-4"
+                                aria-label="Toggle navigation">
+                                <span class="icon-[tabler--menu-2] collapse-open:hidden size-5.5"></span>
+                                <span class="icon-[tabler--x] collapse-open:block size-5.5 hidden"></span>
+                            </button>
+                        </div>
+                    </div>
+                    <div id="navbar-block-4"
+                        class="md:navbar-center transition-height collapse hidden adczl overflow-hidden font-medium duration-300 md:flex">
+                        <div class="text-base-content flex xlo5x text-base max-md:mt-4 max-md:flex-col md:items-center">
+                            <a href="#home" class="hover:text-primary nav-link">Home</a>
+                            <a href="#about-us" class="hover:text-primary nav-link">About Us</a>
+                            <a href="#features" class="hover:text-primary nav-link">Features</a>
+                            <a href="#faqs" class="hover:text-primary nav-link">FAQs</a>
+                        </div>
+                    </div>
+                    <div class="zrq5j max-md:hidden">
+                        <a href="https://wa.me/+2347046630258" class="btn btn-primary">Get Started</a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <!-- Hero -->
+            <section id="home">
+                <div class="jbqhz bg-[url('../../img/mobile-app-lading-page/grid-bg.png')] w5dga p2k6d y5c3w">
+                    <div class="max-w-[1280px] relative bd5zv flex flex-col items-center t7y1e e6j53 sm:px-6 lg:px-8">
+                        <div class="flex l8txf flex-col items-center g9fs9 gjub7 text-center">
+                            <h1 class="intersect-once intersect:motion-preset-slide-down intersect:motion-duration-800 intersect:motion-opacity-in-0 intersect:motion-delay-300 text-base-content lgtdm yx8fg leading-[1.15] max-md:text-2xl"
+                                style="margin: 80px 0px 0px 0px;">
+                                Book Flights, Rides &
+                                <span class="xazk7 ecews k0611 vkurx nkmv1 opx1h">Hotels</span>
+                                Right from WhatsApp
+                            </h1>
+
+                            <p
+                                class="text-base-content/80 intersect-once intersect:motion-preset-slide-down intersect:motion-duration-800 intersect:motion-opacity-in-0 intersect:motion-delay-500">
+                                <strong>Bopadi</strong> is your smart WhatsApp travel
+                                assistant that helps you
+                                <strong>book flights, rides, and hotels</strong> in seconds.
+                                Chat naturally, get instant options, and manage your bookings
+                                all within WhatsApp.
+                            </p>
+
+                            <div
+                                class="intersect-once intersect:motion-preset-slide-down intersect:motion-duration-800 intersect:motion-opacity-in-0 intersect:motion-delay-700 flex items-center justify-center gap-4 max-md:flex-col">
+                                <a href="https://wa.me/+2347046630258"
+                                    class="rounded-field shadow-base-300/20 flex items-center gap-4 kvvjz hqyv3 u032e shadow-sm">
+                                    <span class="flex items-center gap-4">
+                                        <img src="./assets/images/whatsapp.png" alt="App Store" class="yfd9m" />
+                                        <span class="flex flex-col jgcej zvy52">
+                                            <span class="text-xs">Start on</span>
+                                            <span class="font-medium">WhatsApp</span>
+                                        </span>
+                                    </span>
+                                </a>
+
+                                <div
+                                    class="intersect-once intersect:motion-preset-slide-down intersect:motion-duration-800 intersect:motion-opacity-in-0 intersect:motion-delay-900 absolute end-[-20%] top-[80%] hidden md:block rtl:end-[100%]">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="56" height="131" viewBox="0 0 56 131"
+                                        fill="none">
+                                        <path id="arrowPath" fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M21.2715 121.402C20.9656 121.843 20.7603 122.451 20.3456 122.675C19.2321 123.278 18.0663 124.015 16.8539 124.163C12.7504 124.664 9.46105 126.927 5.97751 128.799C5.11012 129.264 4.24702 129.78 3.31794 130.079C2.6821 130.285 1.93451 130.225 1.24601 130.164C0.57884 130.108 0.0311324 129.12 0.331698 128.533C0.650394 127.911 1.03298 127.309 1.46627 126.765C2.79557 125.097 4.24057 123.516 5.49143 121.793C6.91306 119.838 8.10279 117.744 8.36883 115.244C8.47112 114.284 9.05975 113.698 10.0976 113.784C11.2008 113.876 11.9184 114.768 11.6632 115.864C11.3731 117.103 10.9338 118.303 10.5545 119.534C11.3617 120.243 11.8157 119.489 12.2747 119.076C17.0699 114.776 20.8326 109.606 24.5754 104.42C26.2336 102.124 27.8484 99.7852 29.6346 97.59C33.1661 93.2494 36.0019 88.5701 37.3652 83.084C38.0154 80.4669 38.7709 77.8765 39.3822 75.2526C39.6617 74.0515 39.7055 72.7942 39.8904 71.2734C36.8547 71.7014 34.2004 72.1187 31.5337 72.4414C26.708 73.0253 21.5987 70.0913 20.2954 65.7683C18.3052 59.1543 20.4846 53.4362 27.1864 50.2748C28.9448 49.4455 30.8539 49.8285 32.5887 50.5072C34.7287 51.3428 36.5653 52.6243 37.8703 54.6301C39.4286 57.0321 40.7645 59.5013 41.3754 62.3296C41.6368 63.5386 42.0458 64.7159 42.4955 66.2876C43.1787 65.6863 43.632 65.4024 43.9386 65.0057C49.7961 57.4425 52.7139 48.7615 52.7134 39.3011C52.7141 30.6057 50.1567 22.5366 45.0679 15.3332C42.696 11.9781 40.567 8.4467 38.4023 4.94749C37.8175 4.00033 37.4527 2.89917 37.1088 1.82978C37.0113 1.53018 37.2783 0.827138 37.507 0.763854C37.9744 0.632407 38.5748 0.699195 39.0323 0.892172C39.3774 1.03819 39.6312 1.47847 39.8524 1.83148C42.6284 6.27698 45.3814 10.7373 48.1599 15.1803C55.5246 26.9526 57.14 39.4939 53.1415 52.757C51.2733 58.9539 48.4513 64.6486 43.801 69.2721C42.9111 70.1584 42.6775 71.1487 42.5784 72.3185C42.0008 79.1938 39.9997 85.6982 36.9673 91.8402C35.5965 94.6139 33.6646 97.1264 31.8445 99.6545C30.4368 101.606 28.6568 103.294 27.3089 105.28C24.1115 109.995 20.5478 114.392 16.5836 118.473C15.7276 119.354 14.758 120.183 14.7974 121.596C16.9753 122.09 18.9026 118.949 21.2715 121.402ZM39.2482 68.2597C39.5679 64.1759 38.0702 60.9986 36.4655 57.826C35.4658 55.8461 33.9911 54.4266 32.0565 53.394C29.8573 52.2191 27.9763 52.317 26.2789 54.1209C25.1273 55.343 23.9581 56.7334 23.3793 58.2672C22.5884 60.3664 22.0613 62.8243 23.0518 64.9097C24.4377 67.8262 26.7163 70.0049 30.304 69.9336C33.2738 69.877 36.196 69.4649 39.2482 68.2597Z"
+                                            fill="#76717F" stroke="#76717F" stroke-width="0.5" class="d101o" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:mt-23 gn1x2 sm:mt-16">
+                        <div class="max-w-[1280px] relative bd5zv overflow-hidden">
+                            <div
+                                class="cxil6 intersect-once intersect:motion-preset-slide-up intersect:motion-duration-800 intersect:motion-opacity-in-0 intersect:motion-delay-1700 absolute start-[8%] top-[20%] hidden rotate-[-8deg] rounded-full e6j53 py-2 lg:block xl:start-[12%]">
+                                <h5 class="text-base-content itvoh j05ae">Instant Flight Deals ✈️</h5>
+                            </div>
+
+                            <div
+                                class="l8ryx intersect-once intersect:motion-preset-slide-up intersect:motion-duration-800 intersect:motion-opacity-in-0 intersect:motion-delay-1900 absolute start-[4%] top-[66%] hidden rotate-[11deg] rounded-full e6j53 py-2 lg:block xl:start-[8%]">
+                                <h5 class="text-base-content itvoh j05ae">Ride Bookings 🚗</h5>
+                            </div>
+
+                            <div
+                                class="r1nc2 intersect-once intersect:motion-preset-slide-up intersect:motion-duration-800 intersect:motion-opacity-in-0 intersect:motion-delay-2100 absolute end-[8%] top-[20%] hidden rotate-[13deg] rounded-full e6j53 py-2 lg:block xl:end-[12%]">
+                                <h5 class="text-base-content itvoh j05ae">Hotel Finder 🏨</h5>
+                            </div>
+
+                            <div
+                                class="hly7r intersect-once intersect:motion-preset-slide-up intersect:motion-duration-800 intersect:motion-opacity-in-0 intersect:motion-delay-2300 absolute end-[4%] top-[66%] hidden rotate-[-11deg] rounded-full e6j53 py-2 lg:block xl:end-[8%]">
+                                <h5 class="text-base-content itvoh j05ae">Secure Payments 🔐</h5>
+                            </div>
+
+                            <img src="./assets/images/mockup-device-1.png" alt="FlyonUI App Interface"
+                                class="ds320 max-sm:-bottom-18 intersect-once intersect:motion-preset-focus-md intersect:motion-duration-800 intersect:motion-opacity-in-0 intersect:motion-delay-1500 relative w-full fddki" />
+                        </div>
+                        <div
+                            class="csk06 intersect-once u68ir intersect:motion-duration-800 intersect:motion-opacity-in-0 intersect:motion-delay-1300 mt6s0 w-full p-2">
+                            <div class="gtrg2 relative flex w-full items-center justify-center overflow-hidden">
+                                <div
+                                    class="clone j1td2 rtl:animate-marqueeleft absolute flex items-center justify-center dt68u">
+
+                                    <h5 class="fjiw5 text-nowrap ehpxe yx8fg">
+                                        Book Flights & Rides on WhatsApp ✈️
+                                    </h5>
+                                    <span class="icon-[tabler--sparkles] qe1ig fjiw5 shrink-0"></span>
+
+                                    <h5 class="fjiw5 text-nowrap ehpxe yx8fg">
+                                        Your Travel Padi Is Always Online 💬
+                                    </h5>
+                                    <span class="icon-[tabler--sparkles] qe1ig fjiw5 shrink-0"></span>
+
+                                    <h5 class="fjiw5 text-nowrap ehpxe yx8fg">
+                                        Find Hotels Fast & Easy 🏨
+                                    </h5>
+                                    <span class="icon-[tabler--sparkles] qe1ig fjiw5 shrink-0"></span>
+
+                                    <h5 class="fjiw5 text-nowrap ehpxe yx8fg">
+                                        Travel Made Simple with Bopadi 🌍
+                                    </h5>
+                                    <span class="icon-[tabler--sparkles] qe1ig fjiw5 shrink-0"></span>
+
+                                    <h5 class="fjiw5 text-nowrap ehpxe yx8fg">
+                                        Book, Chat & Go 🚗
+                                    </h5>
+                                    <span class="icon-[tabler--sparkles] qe1ig fjiw5 shrink-0"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- About Us -->
+            <section id="about-us">
+                <div
+                    class="bg-base-100 bg-[url('../../img/mobile-app-landing-page/layer-blur-2.png')] p2k6d y5c3w gn2e2 sm:py-16 lg:py-24">
+                    <div class="max-w-[1280px] bd5zv e6j53 sm:px-6 lg:px-8">
+                        <!-- Main Content Section -->
+                        <div class="lg:gap-22 fhy6t items-center n7j2b lg:grid-cols-2 xl:gap-44">
+                            <!-- Left Column -->
+                            <div class="x21h2">
+                                <div>
+                                    <span
+                                        class="badge badge-soft badge-primary intersect-once intersect:motion-preset-slide-right-md intersect:motion-duration-800 intersect:motion-opacity-in-0 rounded-full">
+                                        About Us
+                                    </span>
+                                </div>
+
+                                <h2
+                                    class="fpocx intersect-once intersect:motion-preset-slide-right-md intersect:motion-duration-800 intersect:motion-opacity-in-0 intersect:motion-delay-300 ehpxe md:text-3xl lg:text-4xl">
+                                    Built for Travelers Who Love Simplicity & Speed
+                                </h2>
+
+                                <p
+                                    class="text-base-content/80 intersect-once intersect:motion-preset-slide-right-md intersect:motion-duration-800 intersect:motion-opacity-in-0 intersect:motion-delay-600 ehpxe">
+                                    <strong>Bopadi</strong> (short for <em>Booking Padi</em>) is your friendly WhatsApp
+                                    travel assistant.
+                                    We make it easy for anyone to <strong>book flights, rides, and hotels</strong>
+                                    directly through chat — no apps, no stress.
+                                    Our mission is simple: to bring seamless travel booking to every phone in Nigeria
+                                    and beyond.
+                                </p>
+
+                                <a href="#features"
+                                    class="btn btn-primary eficd u60zw rounded-field intersect-once intersect:motion-preset-slide-right-md intersect:motion-duration-800 intersect:motion-opacity-in-0 intersect:motion-delay-900">
+                                    Check Out Our Features
+                                    <span class="icon-[tabler--arrow-right] size-5 rtl:rotate-180"></span>
+                                </a>
+                            </div>
+
+                            <!-- Right Column -->
+                            <div
+                                class="intersect-once intersect:motion-preset-slide-left-md intersect:motion-duration-800 intersect:motion-opacity-in-0 intersect:motion-delay-1100">
+                                <img src="./assets/images/group-image.png" alt="Bopadi Team Illustration"
+                                    class="imk2a w-full" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- Features -->
+            <section id="features">
+                <div class="bg-base-100 gn2e2 sm:py-16 lg:py-24">
+                    <div class="max-w-[1280px] bd5zv e6j53 sm:px-6 lg:px-8">
+                        <!-- Hero Section -->
+                        <div class="xc5f6 x21h2 text-center sm:mb-16 lg:mb-24">
+                            <div>
+                                <span
+                                    class="badge badge-soft badge-primary xulae intersect-once intersect:motion-preset-expand intersect:motion-duration-900 intersect:motion-opacity-in-0 rounded-full text-sm">
+                                    Our Features
+                                </span>
+                            </div>
+                            <h2
+                                class="text-base-content intersect-once intersect:motion-preset-expand intersect:motion-duration-900 intersect:motion-opacity-in-0 intersect:motion-delay-300 tjfu0 j05ae md:text-3xl lg:text-4xl">
+                                <span class="z-1 relative yx8fg">
+                                    Everything You Need for Seamless Bookings on WhatsApp
+                                    <span
+                                        class="xazk7 -z-1 absolute r0zdl hh3vt h8fk0 w-full m55wp m3w8p gefzu max-sm:hidden"
+                                        aria-hidden="true"></span>
+                                </span>
+                            </h2>
+                            <p
+                                class="text-base-content/80 intersect-once intersect:motion-preset-expand intersect:motion-duration-900 intersect:motion-opacity-in-0 intersect:motion-delay-600 ehpxe">
+                                Bopadi makes travel simple — book flights, rides, and hotels instantly, all in one
+                                WhatsApp chat.
+                            </p>
+                        </div>
+
+                        <!-- Feature Section -->
+                        <div class="fhy6t items-center dt68u xl:grid-cols-3">
+                            <!-- feature left -->
+                            <div class="flex flex-col items-center j0j4s md:items-end">
+
+                                <!-- Flight Booking -->
+                                <div
+                                    class="intersect-once intersect:motion-preset-slide-right-md intersect:motion-duration-800 intersect:motion-opacity-in-0 intersect:motion-delay-900 border-base-content/20 rounded-field flex items-center gap-4 border ar7to">
+                                    <div class="flex flex-col gap-2 dubsx">
+                                        <h5 class="text-base-content itvoh j05ae">Flight Bookings</h5>
+                                        <p class="text-base-content/80 text-sm">
+                                            Search and book flights instantly from WhatsApp with real-time prices and
+                                            airline options.
+                                        </p>
+                                    </div>
+                                    <div
+                                        class="rounded-box border-primary wsbm8 text-primary tdcgk flex shrink-0 items-center justify-center border">
+                                        <span class="icon-[tabler--plane-tilt] size-8"></span>
+                                    </div>
+                                </div>
+
+                                <!-- Ride Requests -->
+                                <div
+                                    class="intersect-once intersect:motion-preset-slide-right-md intersect:motion-duration-800 intersect:motion-opacity-in-0 intersect:motion-delay-1100 border-base-content/20 rounded-field flex items-center gap-4 border ar7to">
+                                    <div class="flex flex-col gap-2 dubsx">
+                                        <h5 class="text-base-content itvoh j05ae">Ride Requests 🚗</h5>
+                                        <p class="text-base-content/80 text-sm">
+                                            Get connected to verified drivers or local taxis in minutes — directly in
+                                            your chat.
+                                        </p>
+                                    </div>
+                                    <div
+                                        class="rounded-box border-primary wsbm8 text-primary tdcgk flex shrink-0 items-center justify-center border">
+                                        <span class="icon-[tabler--car] size-8"></span>
+                                    </div>
+                                </div>
+
+                                <!-- Hotel Finder -->
+                                <div
+                                    class="intersect-once intersect:motion-preset-slide-right-md intersect:motion-duration-800 intersect:motion-opacity-in-0 intersect:motion-delay-1300 border-base-content/20 rounded-field flex items-center gap-4 border ar7to">
+                                    <div class="flex flex-col gap-2 dubsx">
+                                        <h5 class="text-base-content itvoh j05ae">Hotel Finder 🏨</h5>
+                                        <p class="text-base-content/80 text-sm">
+                                            Discover and reserve hotels that match your budget and location preferences.
+                                        </p>
+                                    </div>
+                                    <div
+                                        class="rounded-box border-primary wsbm8 text-primary tdcgk flex shrink-0 items-center justify-center border">
+                                        <span class="icon-[tabler--building-arch] size-8"></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- feature center (mockup image) -->
+                            <div
+                                class="intersect-once intersect:motion-preset-expand intersect:motion-duration-900 intersect:motion-opacity-in-0 intersect:motion-delay-800">
+                                <img src="./assets/images/mockup-device-1.2.png" alt="Phone image"
+                                    class="g7j6k xjy7n bd5zv ekgnz" />
+                            </div>
+
+                            <!-- feature right -->
+                            <div class="j0j4s">
+
+                                <!-- WhatsApp Booking -->
+                                <div
+                                    class="intersect-once intersect:motion-preset-slide-left-md intersect:motion-duration-800 intersect:motion-opacity-in-0 intersect:motion-delay-900 border-base-content/20 rounded-field flex items-center gap-4 border ar7to">
+                                    <div
+                                        class="rounded-box border-primary wsbm8 text-primary tdcgk flex shrink-0 items-center justify-center border">
+                                        <span class="icon-[tabler--brand-hipchat] size-8"></span>
+                                    </div>
+                                    <div class="flex flex-col gap-2">
+                                        <h5 class="text-base-content itvoh j05ae">Chat & Book 💬</h5>
+                                        <p class="text-base-content/80 text-sm">
+                                            Book anything through a simple WhatsApp chat — no apps, no forms, no stress.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <!-- Travel Deals -->
+                                <div
+                                    class="intersect-once intersect:motion-preset-slide-left-md intersect:motion-duration-800 intersect:motion-opacity-in-0 intersect:motion-delay-1100 border-base-content/20 rounded-field flex items-center gap-4 border ar7to">
+                                    <div
+                                        class="rounded-box border-primary wsbm8 text-primary tdcgk flex shrink-0 items-center justify-center border">
+                                        <span class="icon-[tabler--discount-2] size-8"></span>
+                                    </div>
+                                    <div class="flex flex-col gap-2">
+                                        <h5 class="text-base-content itvoh j05ae">Exclusive Deals 💸</h5>
+                                        <p class="text-base-content/80 text-sm">
+                                            Get notified about flight and hotel right inside WhatsApp.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <!-- Secure Payments -->
+                                <div
+                                    class="intersect-once intersect:motion-preset-slide-left-md intersect:motion-duration-800 intersect:motion-opacity-in-0 intersect:motion-delay-1300 border-base-content/20 rounded-field flex items-center gap-4 border ar7to">
+                                    <div
+                                        class="rounded-box border-primary wsbm8 text-primary tdcgk flex shrink-0 items-center justify-center border">
+                                        <span class="icon-[tabler--lock] size-8"></span>
+                                    </div>
+                                    <div class="flex flex-col gap-2">
+                                        <h5 class="text-base-content itvoh j05ae">Secure Payments 🔐</h5>
+                                        <p class="text-base-content/80 text-sm">
+                                            Enjoy end-to-end encrypted payments and booking confirmations you can trust.
+                                        </p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- Benefits -->
+            <section id="benefits">
+                <div class="dv6pf tvpsu m3w8p ud2ua gn2e2 sm:py-16 lg:py-24">
+                    <div class="max-w-[1280px] bd5zv e6j53 sm:px-6 lg:px-8">
+                        <div class="flex flex-col items-center t7y1e">
+                            <!-- Main Content Section -->
+                            <div class="fhy6t mm9gc lg:grid-cols-2">
+                                <!-- Left Column -->
+                                <div class="flex flex-col xlo5x">
+                                    <div class="x21h2">
+                                        <div>
+                                            <span
+                                                class="badge badge-soft badge-primary intersect-once intersect:motion-preset-slide-right-md intersect:motion-duration-800 intersect:motion-opacity-in-0 rounded-full">Benefits</span>
+                                        </div>
+                                        <h2
+                                            class="fpocx intersect-once intersect:motion-preset-slide-right-md intersect:motion-duration-800 intersect:motion-opacity-in-0 intersect:motion-delay-200 ehpxe md:text-3xl lg:text-4xl">
+                                            Why Choose
+                                            <span class="xazk7 ecews k0611 vkurx nkmv1 opx1h">Bopadi?</span>
+                                        </h2>
+                                        <p
+                                            class="text-base-content/80 intersect-once intersect:motion-preset-slide-right-md intersect:motion-duration-800 intersect:motion-opacity-in-0 intersect:motion-delay-400 md:text-lg lg:text-xl">
+                                            Bopadi makes booking flights, rides, and hotels as easy as chatting
+                                            with a friend — all from your WhatsApp. No apps, no stress, just
+                                            convenience.
+                                        </p>
+                                    </div>
+
+                                    <div class="dbtrq mt-6 space-y-4">
+                                        <div
+                                            class="intersect-once intersect:motion-preset-blur-down-md intersect:motion-duration-800 intersect:motion-opacity-in-0 intersect:motion-delay-600 flex gap-3">
+                                            <div>
+                                                <span class="icon-[tabler--circle-check] text-primary size-6"></span>
+                                            </div>
+                                            <p class="text-base-content/80 itvoh">
+                                                <span class="j05ae">Simple WhatsApp Booking:</span>
+                                                Book flights, rides, or hotels instantly by just sending a message — no
+                                                need for extra apps.
+                                            </p>
+                                        </div>
+
+                                        <div
+                                            class="intersect-once intersect:motion-preset-blur-down-md intersect:motion-duration-800 intersect:motion-opacity-in-0 intersect:motion-delay-800 flex gap-3">
+                                            <div>
+                                                <span class="icon-[tabler--circle-check] text-primary size-6"></span>
+                                            </div>
+                                            <p class="text-base-content/80 itvoh">
+                                                <span class="j05ae">24/7 Chat Support:</span>
+                                                Get real-time assistance directly from WhatsApp whenever you need it.
+                                            </p>
+                                        </div>
+
+                                        <div
+                                            class="intersect-once intersect:motion-preset-blur-down-md intersect:motion-duration-800 intersect:motion-opacity-in-0 intersect:motion-delay-1000 flex gap-3">
+                                            <div>
+                                                <span class="icon-[tabler--circle-check] text-primary size-6"></span>
+                                            </div>
+                                            <p class="text-base-content/80 itvoh">
+                                                <span class="j05ae">Trusted & Secure:</span>
+                                                We partner with verified airlines, hotel chains, and ride providers to
+                                                ensure safety and reliability.
+                                            </p>
+                                        </div>
+
+                                        <div
+                                            class="intersect-once intersect:motion-preset-blur-down-md intersect:motion-duration-800 intersect:motion-opacity-in-0 intersect:motion-delay-1200 flex gap-3">
+                                            <div>
+                                                <span class="icon-[tabler--circle-check] text-primary size-6"></span>
+                                            </div>
+                                            <p class="text-base-content/80 itvoh">
+                                                <span class="j05ae">All-in-One Platform:</span>
+                                                From booking to confirmation, everything happens in one chat — fast,
+                                                smooth, and friendly.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Right Column -->
+                                <div
+                                    class="intersect-once intersect:motion-duration-800 intersect:motion-opacity-in-0 intersect:motion-delay-1000 relative flex items-center justify-center lg:justify-end">
+                                    <div
+                                        class="bg-primary/5 gh6b7 md:size-110 xl:size-138 relative bd5zv rounded-full lg:mx-0">
+                                        <div
+                                            class="bg-primary/10 zjwu1 md:size-90 xl:size-114 absolute fs4jw top-1/2 yj7lw yeknw rounded-full">
+                                        </div>
+                                        <div
+                                            class="s26dm dguzu md:size-70 absolute fs4jw top-1/2 yj7lw yeknw rounded-full xl:size-80">
+                                        </div>
+                                        <!-- Illustration -->
+                                        <img src="./assets/images/benefits_hero.png"
+                                            alt="Bopadi WhatsApp Booking Illustration"
+                                            class="intersect-once intersect:motion-preset-fade-md intersect:motion-duration-800 intersect:motion-delay-1250 smkvv md:h-85 xl:h-104 absolute fs4jw top-[44%] dtl21 yj7lw yeknw rounded-b-[80px]" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- FAQ -->
+            <section id="faqs">
+                <div class="bg-base-100 gn2e2 sm:py-16 lg:py-24">
+                    <div class="max-w-[1280px] bd5zv e6j53 sm:px-6 lg:px-8">
+                        <!-- FAQ Header -->
+                        <div class="xc5f6 x21h2 text-center sm:mb-16 lg:mb-24">
+                            <div>
+                                <span
+                                    class="badge badge-primary badge-soft xulae intersect-once intersect:motion-preset-blur-up intersect:motion-duration-300 intersect:motion-opacity-0 intersect:motion-delay-300 rounded-full text-sm">
+                                    Frequently Asked Questions
+                                </span>
+                            </div>
+                            <h2
+                                class="text-base-content intersect-once intersect:motion-preset-blur-up intersect:motion-duration-300 intersect:motion-opacity-0 intersect:motion-delay-600 tjfu0 j05ae md:text-3xl lg:text-4xl">
+                                Need Help? We've Got Answers
+                            </h2>
+                            <p
+                                class="text-base-content/80 intersect-once intersect:motion-preset-blur-up intersect:motion-duration-300 intersect:motion-opacity-0 intersect:motion-delay-900 ehpxe">
+                                Learn more about how BOPADI helps you explore, connect, and book flights, rides, and
+                                hotels
+                                — all within WhatsApp.
+                            </p>
+                        </div>
+
+                        <!-- FAQ Accordion -->
+                        <div class="accordion liv0n w-full gufsh">
+
+                            <!-- 1 -->
+                            <div class="accordion-item active intersect-once intersect:motion-preset-blur-up intersect:motion-duration-300 intersect:motion-opacity-0 intersect:motion-delay-1100"
+                                id="faq-1">
+                                <button class="accordion-toggle inline-flex items-center justify-between faxlj"
+                                    aria-controls="faq-1-collapse" aria-expanded="false">
+                                    How does BOPADI work?
+                                    <span
+                                        class="icon-[tabler--plus] accordion-item-active:hidden text-base-content size-4.5 block shrink-0"></span>
+                                    <span
+                                        class="icon-[tabler--minus] accordion-item-active:block text-base-content size-4.5 hidden shrink-0"></span>
+                                </button>
+                                <div id="faq-1-collapse"
+                                    class="accordion-content transition-height w-full overflow-hidden duration-300"
+                                    aria-labelledby="faq-1" role="region">
+                                    <div class="ufdzd az4rj">
+                                        <p class="text-base-content/80">
+                                            BOPADI is a WhatsApp bot that helps you easily book flights, rides, and
+                                            hotels.
+                                            Simply chat with BOPADI on WhatsApp, tell it what you need — like “book a
+                                            flight
+                                            to Abuja” or “find me a hotel in Lagos” — and it handles everything for you
+                                            in
+                                            minutes.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 2 -->
+                            <div class="accordion-item intersect-once intersect:motion-preset-blur-up intersect:motion-duration-300 intersect:motion-opacity-0 intersect:motion-delay-1300"
+                                id="faq-2">
+                                <button class="accordion-toggle inline-flex items-center justify-between faxlj"
+                                    aria-controls="faq-2-collapse" aria-expanded="false">
+                                    Is my data and payment information secure?
+                                    <span
+                                        class="icon-[tabler--plus] accordion-item-active:hidden text-base-content size-4.5 block shrink-0"></span>
+                                    <span
+                                        class="icon-[tabler--minus] accordion-item-active:block text-base-content size-4.5 hidden shrink-0"></span>
+                                </button>
+                                <div id="faq-2-collapse"
+                                    class="accordion-content transition-height hidden w-full overflow-hidden duration-300"
+                                    aria-labelledby="faq-2" role="region">
+                                    <div class="ufdzd az4rj">
+                                        <p class="text-base-content/80">
+                                            Yes, absolutely. BOPADI uses encrypted and verified channels to protect your
+                                            chats,
+                                            data, and payments. All transactions are processed securely and we never
+                                            share your
+                                            information with third parties.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 3 -->
+                            <div class="accordion-item intersect-once intersect:motion-preset-blur-up intersect:motion-duration-300 intersect:motion-opacity-0 intersect:motion-delay-1500"
+                                id="faq-3">
+                                <button class="accordion-toggle inline-flex items-center justify-between faxlj"
+                                    aria-controls="faq-3-collapse" aria-expanded="false">
+                                    Can I book flights directly through WhatsApp?
+                                    <span
+                                        class="icon-[tabler--plus] accordion-item-active:hidden text-base-content size-4.5 block shrink-0"></span>
+                                    <span
+                                        class="icon-[tabler--minus] accordion-item-active:block text-base-content size-4.5 hidden shrink-0"></span>
+                                </button>
+                                <div id="faq-3-collapse"
+                                    class="accordion-content transition-height hidden w-full overflow-hidden duration-300"
+                                    aria-labelledby="faq-3" role="region">
+                                    <div class="ufdzd az4rj">
+                                        <p class="text-base-content/80">
+                                            Yes! You can explore flight options, compare fares, and book tickets
+                                            directly
+                                            through our WhatsApp bot. BOPADI connects with trusted airline and travel
+                                            partners
+                                            to ensure you always get reliable deals.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 4 -->
+                            <div class="accordion-item intersect-once intersect:motion-preset-blur-up intersect:motion-duration-300 intersect:motion-opacity-0 intersect:motion-delay-1700"
+                                id="faq-4">
+                                <button class="accordion-toggle inline-flex items-center justify-between faxlj"
+                                    aria-controls="faq-4-collapse" aria-expanded="false">
+                                    Do I need to download a separate app?
+                                    <span
+                                        class="icon-[tabler--plus] accordion-item-active:hidden text-base-content size-4.5 block shrink-0"></span>
+                                    <span
+                                        class="icon-[tabler--minus] accordion-item-active:block text-base-content size-4.5 hidden shrink-0"></span>
+                                </button>
+                                <div id="faq-4-collapse"
+                                    class="accordion-content transition-height hidden w-full overflow-hidden duration-300"
+                                    aria-labelledby="faq-4" role="region">
+                                    <div class="ufdzd az4rj">
+                                        <p class="text-base-content/80">
+                                            Nope! You don’t need to install anything new. BOPADI works directly inside
+                                            WhatsApp,
+                                            so you can chat, search, and book on the go without switching between apps.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 5 -->
+                            <div class="accordion-item intersect-once intersect:motion-preset-blur-up intersect:motion-duration-300 intersect:motion-opacity-0 intersect:motion-delay-1900"
+                                id="faq-5">
+                                <button class="accordion-toggle inline-flex items-center justify-between faxlj"
+                                    aria-controls="faq-5-collapse" aria-expanded="false">
+                                    What makes BOPADI different?
+                                    <span
+                                        class="icon-[tabler--plus] accordion-item-active:hidden text-base-content size-4.5 block shrink-0"></span>
+                                    <span
+                                        class="icon-[tabler--minus] accordion-item-active:block text-base-content size-4.5 hidden shrink-0"></span>
+                                </button>
+                                <div id="faq-5-collapse"
+                                    class="accordion-content transition-height hidden w-full overflow-hidden duration-300"
+                                    aria-labelledby="faq-5" role="region">
+                                    <div class="ufdzd az4rj">
+                                        <p class="text-base-content/80">
+                                            BOPADI brings African convenience to your fingertips — simple,
+                                            conversational,
+                                            and reliable. Whether you’re booking a trip, ride, or hotel, everything
+                                            happens
+                                            in one friendly WhatsApp chat. No stress, no extra apps.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+        <div class="crmfv"></div>
+        <!-- Footer -->
+        <footer>
+            <div class="max-w-[1280px] bd5zv e6j53 k3cg2 sm:px-6 sm:py-6 lg:px-8 lg:py-8">
+                <div class="flex items-center justify-between gap-3 max-md:flex-col">
+                   
+                    
+                    <nav class="flex items-center xlo5x">
+                        <a href="#" class="y9rox sy890 text-base-content/80 font-medium">Email:contact@bopadi.app</a>
+                        <!-- <a href="#" class="y9rox sy890 text-base-content/80 font-medium">||</a> -->
+                        <a href="#" class="y9rox sy890 text-base-content/80 font-medium">Tel:0906 581 4902</a>
+                        
+                    </nav>
+                    <!-- Social Icons -->
+                    <div class="text-base-content flex snwcg gap-4">
+                        <a href="https://www.facebook.com/profile.php?id=61582320794277" target="_blank" aria-label="Facebook">
+                            <span class="icon-[tabler--brand-facebook] size-5"></span>
+                        </a>
+                        <a href="https://www.instagram.com/bopadi_official?igsh=MTBsYjZ6MmFxcjZlZw==" target="_blank" aria-label="Instagram">
+                            <span class="icon-[tabler--brand-instagram] size-5"></span>
+                        </a>
+                        <a href="https://x.com/Bopadiofficial?t=-WcOiD3g60gcw5tJJl8h9g&s=09" target="_blank" aria-label="Twitter">
+                            <span class="icon-[tabler--brand-x] size-5"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="crmfv"></div>
+        </footer>
+    </div>
+
+    <!-- Vendors JS -->
+    <script src="./assets/js/tailwind_observer.js"></script>
+
+    <!-- Main JS -->
+    <script src="./assets/js/main.js"></script>
+
+    <!-- Page JS -->
+    <script src="./assets/js/mobile_btn.js"></script>
+    <button id="scrollToTopBtn"
+        class="btn btn-circle btn-soft btn-secondary/20 j0x7m i3w89 w5xlu v53cv cwegy fixed absolute z-[3] hidden"
+        aria-label="Circle Soft Icon Button">
+        <span class="icon-[tabler--chevron-up] size-5 shrink-0"></span>
+    </button>
+</body>
+
+</html>
