@@ -75,13 +75,7 @@
         .logo_img {
             width: 250px;
         }
- @keyframes fade-in {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-  .animate-fade-in {
-    animation: fade-in 0.3s ease-out;
-  }
+ 
         @media (max-width: 500px) {
             .logo_img {
                 width: 200px;
@@ -92,35 +86,6 @@
 
 <body>
     <div class="bg-base-100">
-        <div id="waitlistModal" class="fixed inset-0 hidden bg-white/10 backdrop-blur-md flex items-center justify-center z-[9999] px-4">
-
-  <!-- ✅ Modal Card -->
-  <div class="relative w-full max-w-sm sm:max-w-md bg-[#0e0e0e] rounded-2xl shadow-2xl border border-white/10 p-6 sm:p-8 animate-fade-in">
-    
-    <!-- Close button -->
-    <button id="closeModalBtn" class="absolute top-4 right-4 text-gray-400 hover:text-gray-200 text-xl">&times;</button>
-
-    <!-- Header -->
-    <h2 class="text-2xl font-bold text-white text-center mb-2">Join the Waitlist</h2>
-    <p class="text-gray-400 text-center mb-6 text-sm sm:text-base">
-      We’ll notify you when it’s available.
-    </p>
-
-    <!-- Form -->
-    <form class="flex flex-col gap-4">
-      <input 
-        type="email"
-        placeholder="john@appleseed.com"
-        class="w-full bg-[#1a1a1a] border border-gray-700 text-gray-100 placeholder-gray-500 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary transition-all"
-        required
-      />
-
-      <button type="submit" class="w-full py-3 rounded-full bg-primary text-white font-semibold hover:opacity-90 transition-all">
-        Join Waitlist
-      </button>
-    </form>
-  </div>
-</div>
 
         <header
             class="qqtj1 max-sm:bg-base-100 intersect-once intersect:motion-preset-slide-down-lg intersect:motion-duration-800 intersect:motion-opacity-in-0 intersect:motion-delay-100 fixed top-0 f39un w-full transition-all duration-300"
@@ -754,24 +719,7 @@
             <div class="crmfv"></div>
         </footer>
     </div>
-     <script>
-    const openBtn = document.querySelector('.btn-primary[href="#"]');
-    const modal = document.getElementById('waitlistModal');
-    const closeBtn = document.getElementById('closeModalBtn');
-
-    openBtn.addEventListener('click', e => {
-      e.preventDefault();
-      modal.classList.remove('hidden');
-    });
-
-    closeBtn.addEventListener('click', () => {
-      modal.classList.add('hidden');
-    });
-
-    window.addEventListener('click', e => {
-      if (e.target === modal) modal.classList.add('hidden');
-    });
-  </script>
+    
     <!-- Vendors JS -->
     <script src="./assets/js/tailwind_observer.js"></script>
 
@@ -789,6 +737,7 @@
 
 
 </html>
+
 
 
 
