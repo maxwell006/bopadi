@@ -86,6 +86,31 @@
 
 <body>
     <div class="bg-base-100">
+         <div id="waitlistModal" 
+       class="fixed inset-0 hidden bg-black/70 backdrop-blur-sm flex items-center justify-center z-50">
+    <div class="bg-base-200 rounded-2xl shadow-xl p-8 w-full max-w-md relative animate-fade-in">
+      <button id="closeModalBtn" 
+              class="absolute top-4 right-4 text-gray-400 hover:text-gray-200 text-xl">&times;</button>
+
+      <h2 class="text-2xl font-bold text-white text-center mb-2">Join the Waitlist</h2>
+      <p class="text-gray-400 text-center mb-6">
+        We’ll notify you when it’s available.
+      </p>
+
+      <form class="flex flex-col gap-4">
+        <input 
+          type="email" 
+          placeholder="john@appleseed.com" 
+          class="input input-bordered w-full bg-base-300 text-gray-100 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary"
+          required
+        />
+        <button type="submit" class="btn btn-primary w-full rounded-full">
+          Join Waitlist
+        </button>
+      </form>
+    </div>
+  </div>
+
         <header
             class="qqtj1 max-sm:bg-base-100 intersect-once intersect:motion-preset-slide-down-lg intersect:motion-duration-800 intersect:motion-opacity-in-0 intersect:motion-delay-100 fixed top-0 f39un w-full transition-all duration-300"
             id="header">
@@ -718,7 +743,24 @@
             <div class="crmfv"></div>
         </footer>
     </div>
+     <script>
+    const openBtn = document.querySelector('.btn-primary[href="#"]');
+    const modal = document.getElementById('waitlistModal');
+    const closeBtn = document.getElementById('closeModalBtn');
 
+    openBtn.addEventListener('click', e => {
+      e.preventDefault();
+      modal.classList.remove('hidden');
+    });
+
+    closeBtn.addEventListener('click', () => {
+      modal.classList.add('hidden');
+    });
+
+    window.addEventListener('click', e => {
+      if (e.target === modal) modal.classList.add('hidden');
+    });
+  </script>
     <!-- Vendors JS -->
     <script src="./assets/js/tailwind_observer.js"></script>
 
@@ -736,3 +778,4 @@
 
 
 </html>
+
