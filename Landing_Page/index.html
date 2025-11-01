@@ -75,7 +75,13 @@
         .logo_img {
             width: 250px;
         }
-
+ @keyframes fade-in {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .animate-fade-in {
+    animation: fade-in 0.3s ease-out;
+  }
         @media (max-width: 500px) {
             .logo_img {
                 width: 200px;
@@ -139,7 +145,7 @@
                         </div>
                     </div>
                     <div class="zrq5j max-md:hidden">
-                        <a href="#" class="btn btn-primary">Get Started</a>
+                        <a href="#" id="openModalBtn" class="btn btn-primary">Join Waitlist</a>
                     </div>
                 </div>
             </nav>
@@ -778,4 +784,5 @@
 
 
 </html>
+
 
