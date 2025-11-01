@@ -33938,3 +33938,7 @@ span.flatpickr-weekday,
         }
     }
 }
+
+body{
+    overflow-x: hidden !important;
+}

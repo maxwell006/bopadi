@@ -75,18 +75,184 @@
         .logo_img {
             width: 250px;
         }
- 
+
         @media (max-width: 500px) {
             .logo_img {
                 width: 200px;
             }
         }
+
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            backdrop-filter: blur(2px);
+        }
+
+
+        .modal {
+            background-color: #1c1c1e;
+            color: #f1f1f1;
+            padding: 2rem;
+            border-radius: 12px;
+            max-width: 400px;
+            width: 90%;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+            position: relative;
+            animation: fadeIn 0.3s ease;
+        }
+
+
+        .close-btn {
+            position: absolute;
+            top: 12px;
+            right: 16px;
+            background: transparent;
+            border: none;
+            color: #aaa;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .close-btn:hover {
+            color: #fff;
+        }
+
+
+        .modal h2 {
+            text-align: center;
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .modal p {
+            text-align: center;
+            color: #bbb;
+            font-size: 14px;
+            margin-bottom: 24px;
+        }
+
+        label {
+            display: block;
+            text-align: left;
+            font-size: 0.75rem;
+            letter-spacing: 0.05em;
+            color: #888;
+            margin-bottom: 0.4rem;
+        }
+
+
+        .modal input {
+            width: 100%;
+            padding: 0.7rem;
+            border-radius: 8px;
+            border: 1px solid #333;
+            background: #2a2a2d;
+            color: #fff;
+            font-size: 0.8rem;
+            font-weight: 100;
+            margin-bottom: 1rem;
+            outline: none;
+            transition: border 0.2s ease;
+        }
+
+        .modal input:focus {
+            border-color: #007aff;
+        }
+
+
+        .modal button {
+            width: 100%;
+            background: #007aff;
+            color: #fff;
+            border: none;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: 600;
+            padding: 11px 0;
+            margin-top: 20px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .modal button:hover {
+            opacity: 0.85;
+        }
+
+        .loader {
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            border-top: 3px solid #fff;
+            border-radius: 50%;
+            width: 18px;
+            height: 18px;
+            animation: spin 0.8s linear infinite;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
     </style>
 </head>
 
 <body>
     <div class="bg-base-100">
+        <div id="waitlistModal"
+            class="fixed inset-0  bg-black/60 backdrop-blur-sm flex items-center justify-center z-[9999] px-4">
 
+            <div class="modal-overlay" id="waitlistModal">
+                <div class="modal">
+                    <span class="close-btn" id="closeModalBtn">&times;</span>
+                    <h2>Join the Waitlist</h2>
+                    <p>We’ll notify you when Bopadi is available</p>
+                    <form id="waitlistForm">
+
+                        <!-- Name -->
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" placeholder="John Doe" required>
+
+                        <!-- Whatsapp Line -->
+                        <label for="phone">WhatsApp Phone</label>
+                        <input type="tel" id="phone" placeholder="090 000 0000" required>
+
+                        <!-- Email -->
+                        <label for="email">Email address</label>
+                        <input type="email" id="email" placeholder="john@appleseed.com" required>
+                        <button type="submit" id="waitlistBtn">
+                            <span class="btn-text">Join Waitlist</span>
+                            <span class="loader" style="display: none;"></span>
+                        </button>
+
+                    </form>
+                </div>
+            </div>
+        </div>
         <header
             class="qqtj1 max-sm:bg-base-100 intersect-once intersect:motion-preset-slide-down-lg intersect:motion-duration-800 intersect:motion-opacity-in-0 intersect:motion-delay-100 fixed top-0 f39un w-full transition-all duration-300"
             id="header">
@@ -272,7 +438,7 @@
                             <!-- Right Column -->
                             <div
                                 class="intersect-once intersect:motion-preset-slide-left-md intersect:motion-duration-800 intersect:motion-opacity-in-0 intersect:motion-delay-1100">
-                                <img src="./assets/images/group-image.png" alt="Bopadi Team Illustration"
+                                <img src="./assets/images/about.png" alt="Bopadi Team Illustration"
                                     class="imk2a w-full" />
                             </div>
                         </div>
@@ -693,23 +859,23 @@
         <footer>
             <div class="max-w-[1280px] bd5zv e6j53 k3cg2 sm:px-6 sm:py-6 lg:px-8 lg:py-8">
                 <div class="flex items-center justify-between gap-3 max-md:flex-col">
-                   
-                    
                     <nav class="flex items-center xlo5x">
                         <a href="#" class="y9rox sy890 text-base-content/80 font-medium">Email:contact@bopadi.app</a>
-                        <!-- <a href="#" class="y9rox sy890 text-base-content/80 font-medium">||</a> -->
                         <a href="#" class="y9rox sy890 text-base-content/80 font-medium">Tel:0906 581 4902</a>
-                        
                     </nav>
+
                     <!-- Social Icons -->
                     <div class="text-base-content flex snwcg gap-4">
-                        <a href="https://www.facebook.com/profile.php?id=61582320794277" target="_blank" aria-label="Facebook">
+                        <a href="https://www.facebook.com/profile.php?id=61582320794277" target="_blank"
+                            aria-label="Facebook">
                             <span class="icon-[tabler--brand-facebook] size-5"></span>
                         </a>
-                        <a href="https://www.instagram.com/bopadi_official?igsh=MTBsYjZ6MmFxcjZlZw==" target="_blank" aria-label="Instagram">
+                        <a href="https://www.instagram.com/bopadi_official?igsh=MTBsYjZ6MmFxcjZlZw==" target="_blank"
+                            aria-label="Instagram">
                             <span class="icon-[tabler--brand-instagram] size-5"></span>
                         </a>
-                        <a href="https://x.com/Bopadiofficial?t=-WcOiD3g60gcw5tJJl8h9g&s=09" target="_blank" aria-label="Twitter">
+                        <a href="https://x.com/Bopadiofficial?t=-WcOiD3g60gcw5tJJl8h9g&s=09" target="_blank"
+                            aria-label="Twitter">
                             <span class="icon-[tabler--brand-x] size-5"></span>
                         </a>
                     </div>
@@ -719,15 +885,25 @@
             <div class="crmfv"></div>
         </footer>
     </div>
-    
+
+
+
+    <!-- Axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     <!-- Vendors JS -->
     <script src="./assets/js/tailwind_observer.js"></script>
 
     <!-- Main JS -->
     <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/index.js"></script>
 
     <!-- Page JS -->
     <script src="./assets/js/mobile_btn.js"></script>
+
     <button id="scrollToTopBtn"
         class="btn btn-circle btn-soft btn-secondary/20 j0x7m i3w89 w5xlu v53cv cwegy fixed absolute z-[3] hidden"
         aria-label="Circle Soft Icon Button">
@@ -735,9 +911,4 @@
     </button>
 </body>
 
-
 </html>
-
-
-
-
