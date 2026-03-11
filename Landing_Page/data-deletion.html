@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="en" data-theme="corporate-dark" data-assets-path="./assets/" class="wnrde">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+  <title>Data Deletion Request | Bopadi</title>
+  <meta name="description" content="Request deletion of your personal data from Bopadi." />
+  <link rel="icon" type="image/x-icon" href="./assets/images/bopadi_logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./assets/output.css" />
+  <style>
+    :root {
+      --page-bg: #0d0d0f; --surface: #141416; --surface-2: #1c1c1f;
+      --border: rgba(255,255,255,0.07); --accent: #007aff;
+      --accent-glow: rgba(0,122,255,0.12); --danger: #ff3b30;
+      --danger-glow: rgba(255,59,48,0.1);
+      --text-primary: #f0f0f2; --text-secondary: rgba(240,240,242,0.6);
+      --text-muted: rgba(240,240,242,0.35);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { background: var(--page-bg); color: var(--text-primary); font-family: 'Inter', sans-serif; line-height: 1.7; min-height: 100vh; }
+    .site-nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(13,13,15,0.88); backdrop-filter: blur(18px); border-bottom: 1px solid var(--border); }
+    .nav-inner { max-width: 1280px; margin: 0 auto; padding: 0 2rem; height: 64px; display: flex; align-items: center; justify-content: space-between; }
+    .logo_img { width: 160px; }
+    .nav-links { display: flex; gap: 1.75rem; list-style: none; }
+    .nav-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.875rem; font-weight: 500; transition: color 0.2s; }
+    .nav-links a:hover, .nav-links a.active { color: var(--text-primary); }
+    .nav-cta { background: var(--accent); color: #fff; padding: 0.5rem 1.25rem; border-radius: 999px; font-size: 0.875rem; font-weight: 600; text-decoration: none; transition: opacity 0.2s; }
+    .nav-cta:hover { opacity: 0.85; }
+    .page-wrapper { max-width: 800px; margin: 0 auto; padding: 116px 2rem 80px; }
+    .doc-header { margin-bottom: 3rem; padding-bottom: 2.5rem; border-bottom: 1px solid var(--border); }
+    .doc-tag { display: inline-block; background: var(--danger-glow); color: var(--danger); border: 1px solid rgba(255,59,48,0.25); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.3rem 0.85rem; border-radius: 999px; margin-bottom: 1.2rem; }
+    .doc-title { font-family: 'Geist', sans-serif; font-size: clamp(2rem, 5vw, 2.9rem); font-weight: 700; line-height: 1.15; color: var(--text-primary); margin-bottom: 0.85rem; }
+    .doc-meta { font-size: 0.85rem; color: var(--text-muted); }
+    .lead-box { background: var(--surface); border: 1px solid var(--border); border-left: 3px solid var(--accent); border-radius: 10px; padding: 1.15rem 1.5rem; margin-bottom: 3rem; }
+    .lead-box p { color: var(--text-secondary); font-size: 0.95rem; margin: 0; }
+    .doc-content section { margin-bottom: 2.75rem; }
+    .doc-content h2 { font-family: 'Geist', sans-serif; font-size: 1.05rem; font-weight: 650; color: var(--text-primary); margin-bottom: 0.9rem; display: flex; align-items: center; gap: 0.65rem; }
+    .section-num { display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; min-width: 24px; background: var(--accent-glow); border: 1px solid rgba(0,122,255,0.25); color: var(--accent); font-size: 0.68rem; font-weight: 700; border-radius: 6px; }
+    .doc-content p { color: var(--text-secondary); font-size: 0.93rem; line-height: 1.8; margin-bottom: 0.85rem; }
+    .doc-content p:last-child { margin-bottom: 0; }
+    .doc-content ul { list-style: none; padding: 0; margin: 0.5rem 0 0.85rem; }
+    .doc-content ul li { color: var(--text-secondary); font-size: 0.93rem; padding: 0.38rem 0 0.38rem 1.3rem; position: relative; line-height: 1.7; }
+    .doc-content ul li::before { content: ''; position: absolute; left: 0; top: 0.88rem; width: 5px; height: 5px; border-radius: 50%; background: var(--accent); opacity: 0.55; }
+    .steps-grid { display: flex; flex-direction: column; gap: 1rem; margin: 1rem 0; }
+    .step-card { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 1.1rem 1.3rem; display: flex; gap: 1rem; align-items: flex-start; }
+    .step-num { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; min-width: 28px; background: var(--accent-glow); border: 1px solid rgba(0,122,255,0.28); color: var(--accent); font-size: 0.75rem; font-weight: 700; border-radius: 50%; margin-top: 0.1rem; }
+    .step-body h3 { font-size: 0.9rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.2rem; }
+    .step-body p { font-size: 0.88rem; color: var(--text-secondary); margin: 0; line-height: 1.6; }
+    .deletion-form-wrapper { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 2rem; margin-top: 1rem; }
+    .form-grid { display: grid; gap: 1.25rem; }
+    .form-group { display: flex; flex-direction: column; gap: 0.45rem; }
+    .form-group label { font-size: 0.78rem; font-weight: 600; letter-spacing: 0.04em; color: var(--text-muted); text-transform: uppercase; }
+    .form-group input, .form-group select, .form-group textarea { width: 100%; background: var(--surface-2); border: 1px solid var(--border); border-radius: 8px; color: var(--text-primary); font-family: 'Inter', sans-serif; font-size: 0.9rem; padding: 0.75rem 1rem; outline: none; transition: border-color 0.2s, box-shadow 0.2s; appearance: none; }
+    .form-group input::placeholder, .form-group textarea::placeholder { color: var(--text-muted); }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(0,122,255,0.12); }
+    .form-group select { cursor: pointer; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23888' d='M6 8L1 3h10z'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 1rem center; padding-right: 2.5rem; }
+    .form-group select option { background: #1c1c1f; }
+    .form-group textarea { resize: vertical; min-height: 100px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+    .checkbox-group { display: flex; gap: 0.75rem; align-items: flex-start; }
+    .checkbox-group input[type="checkbox"] { width: 17px; height: 17px; min-width: 17px; margin-top: 0.18rem; accent-color: var(--accent); cursor: pointer; padding: 0; background: var(--surface-2); border: 1px solid var(--border); border-radius: 4px; }
+    .checkbox-group label { font-size: 0.88rem; color: var(--text-secondary); text-transform: none; letter-spacing: 0; font-weight: 400; cursor: pointer; }
+    .checkbox-group a { color: var(--accent); text-decoration: none; }
+    .checkbox-group a:hover { text-decoration: underline; }
+    .submit-btn { width: 100%; background: var(--danger); color: #fff; border: none; border-radius: 10px; font-family: 'Inter', sans-serif; font-size: 0.95rem; font-weight: 600; padding: 0.9rem 1.5rem; cursor: pointer; transition: opacity 0.2s, transform 0.15s; margin-top: 0.5rem; display: flex; align-items: center; justify-content: center; gap: 0.6rem; }
+    .submit-btn:hover { opacity: 0.88; transform: translateY(-1px); }
+    .submit-btn:active { transform: translateY(0); }
+    .submit-btn:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
+    .spinner { width: 16px; height: 16px; border: 2px solid rgba(255,255,255,0.35); border-top: 2px solid #fff; border-radius: 50%; animation: spin 0.75s linear infinite; display: none; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .success-state { text-align: center; padding: 3rem 1.5rem; display: none; }
+    .success-icon { width: 56px; height: 56px; border-radius: 50%; background: rgba(52,199,89,0.12); border: 1.5px solid rgba(52,199,89,0.3); display: flex; align-items: center; justify-content: center; margin: 0 auto 1.25rem; }
+    .success-icon svg { width: 24px; height: 24px; stroke: #34c759; fill: none; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+    .success-state h3 { font-family: 'Geist', sans-serif; font-size: 1.35rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.6rem; }
+    .success-state p { color: var(--text-secondary); font-size: 0.93rem; max-width: 380px; margin: 0 auto; }
+    .notice-box { background: var(--danger-glow); border: 1px solid rgba(255,59,48,0.18); border-radius: 10px; padding: 1.1rem 1.4rem; margin: 1rem 0; }
+    .notice-box p { color: rgba(240,240,242,0.75); font-size: 0.9rem; margin: 0; }
+    .notice-box strong { color: var(--danger); }
+    .contact-card { background: var(--surface-2); border: 1px solid var(--border); border-radius: 10px; padding: 1.4rem 1.6rem; margin-top: 0.85rem; }
+    .contact-card p { margin-bottom: 0.4rem; }
+    .contact-card p:last-child { margin-bottom: 0; }
+    .contact-card a { color: var(--accent); text-decoration: none; }
+    .contact-card a:hover { text-decoration: underline; }
+    .contact-card strong { color: var(--text-primary); }
+    .doc-footer { margin-top: 4rem; padding-top: 2rem; border-top: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
+    .doc-footer p { color: var(--text-muted); font-size: 0.8rem; margin: 0; }
+    .footer-links { display: flex; gap: 1.5rem; }
+    .footer-links a { color: var(--text-muted); font-size: 0.8rem; text-decoration: none; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--text-primary); }
+    @media (max-width: 680px) { .nav-links { display: none; } .page-wrapper { padding: 96px 1.25rem 60px; } .form-row { grid-template-columns: 1fr; } .doc-footer { flex-direction: column; align-items: flex-start; } }
+  </style>
+</head>
+<body>
+  <nav class="site-nav">
+    <div class="nav-inner">
+      <a href="./index.html"><img src="./assets/images/bopadi_logo.png" class="logo_img" alt="Bopadi" /></a>
+      <ul class="nav-links">
+        <li><a href="./index.html#home">Home</a></li>
+        <li><a href="./index.html#about-us">About Us</a></li>
+        <li><a href="./index.html#features">Features</a></li>
+        <li><a href="./index.html#faqs">FAQs</a></li>
+        <li><a href="./privacy-policy.html">Privacy Policy</a></li>
+        <li><a href="./terms-of-service.html">Terms of Service</a></li>
+        <li><a href="./data-deletion.html" class="active">Data Deletion</a></li>
+      </ul>
+      <a href="./index.html" class="nav-cta">Join Waitlist</a>
+    </div>
+  </nav>
+
+  <div class="page-wrapper">
+    <div class="doc-header">
+      <div class="doc-tag">Data Rights</div>
+      <h1 class="doc-title">User Data Deletion</h1>
+      <p class="doc-meta">We respect your right to control your personal data. Requests are processed within 30 days.</p>
+    </div>
+
+    <div class="lead-box">
+      <p>You have the right to request deletion of your personal data from Bopadi's systems. This page explains what data we hold, how deletion works, and allows you to submit a formal request. Some data may be retained where required by Nigerian law or for legitimate business purposes.</p>
+    </div>
+
+    <div class="doc-content">
+
+      <section>
+        <h2><span class="section-num">1</span> What Data We Hold</h2>
+        <p>Depending on your level of engagement with Bopadi, we may hold the following categories of personal data:</p>
+        <ul>
+          <li>Identification data: full name, WhatsApp phone number, and email address</li>
+          <li>Transaction records: flight bookings, VTU transactions, payment history, and confirmation details</li>
+          <li>Communication logs: WhatsApp chat history with our bot relevant to service delivery</li>
+          <li>Technical data: IP addresses, device identifiers, and usage logs from our website</li>
+          <li>Waitlist information: name, email, and phone number submitted via our signup form</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2><span class="section-num">2</span> What Happens When You Request Deletion</h2>
+        <p>Upon receiving a valid deletion request, Bopadi will follow the steps below:</p>
+        <div class="steps-grid">
+          <div class="step-card">
+            <span class="step-num">1</span>
+            <div class="step-body">
+              <h3>Verification</h3>
+              <p>We will verify your identity by confirming the phone number or email address associated with your account within 3 business days.</p>
+            </div>
+          </div>
+          <div class="step-card">
+            <span class="step-num">2</span>
+            <div class="step-body">
+              <h3>Data Review</h3>
+              <p>Our team will identify all data associated with your account across our systems and third-party processors.</p>
+            </div>
+          </div>
+          <div class="step-card">
+            <span class="step-num">3</span>
+            <div class="step-body">
+              <h3>Deletion or Anonymization</h3>
+              <p>Eligible data will be permanently deleted or anonymized from our active databases and backups within 30 days of verification.</p>
+            </div>
+          </div>
+          <div class="step-card">
+            <span class="step-num">4</span>
+            <div class="step-body">
+              <h3>Confirmation</h3>
+              <p>You will receive a written confirmation via email or WhatsApp once the deletion process is complete.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2><span class="section-num">3</span> Data We May Retain</h2>
+        <p>Certain categories of data may be retained beyond your deletion request where required by applicable law or legitimate business necessity:</p>
+        <ul>
+          <li>Financial transaction records required for tax compliance, typically for a minimum of 5 years under Nigerian law</li>
+          <li>Data necessary to resolve ongoing disputes or pending investigations</li>
+          <li>Anonymized, aggregated data that cannot be linked back to you as an individual</li>
+          <li>Records required to prevent fraudulent re-registration or service abuse</li>
+        </ul>
+        <div class="notice-box">
+          <p><strong>Please note:</strong> Deleting your data will terminate your access to Bopadi services. Any pending bookings or active transactions should be resolved before submitting a deletion request.</p>
+        </div>
+      </section>
+
+      <section>
+        <h2><span class="section-num">4</span> Submit a Deletion Request</h2>
+        <p>Complete the form below to submit your data deletion request. All required fields must be filled in so we can locate and verify your account.</p>
+
+        <div class="deletion-form-wrapper">
+          <div id="formState">
+            <div class="form-grid">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="del-name">Full Name</label>
+                  <input type="text" id="del-name" placeholder="Your full name" />
+                </div>
+                <div class="form-group">
+                  <label for="del-phone">WhatsApp Phone Number</label>
+                  <input type="tel" id="del-phone" placeholder="e.g. 08012345678" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="del-email">Email Address</label>
+                <input type="email" id="del-email" placeholder="The email you registered with" />
+              </div>
+              <div class="form-group">
+                <label for="del-type">Type of Data to Delete</label>
+                <select id="del-type">
+                  <option value="" disabled selected>Select an option</option>
+                  <option value="all">All personal data</option>
+                  <option value="account">Account and profile data only</option>
+                  <option value="transactions">Transaction and booking history only</option>
+                  <option value="communications">Chat and communication history only</option>
+                  <option value="marketing">Marketing and waitlist data only</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="del-reason">Reason for Request (optional)</label>
+                <textarea id="del-reason" placeholder="Let us know why you are requesting deletion. This helps us improve our service."></textarea>
+              </div>
+              <div class="checkbox-group">
+                <input type="checkbox" id="del-confirm" />
+                <label for="del-confirm">I understand that deleting my data will terminate my access to Bopadi services, and that some data may be retained as required by law. I have read the <a href="./privacy-policy.html">Privacy Policy</a>.</label>
+              </div>
+              <button class="submit-btn" id="del-submit" onclick="handleDeletion(event)">
+                <span id="btn-text">Submit Deletion Request</span>
+                <span class="spinner" id="btn-spinner"></span>
+              </button>
+            </div>
+          </div>
+
+          <div class="success-state" id="successState">
+            <div class="success-icon">
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            </div>
+            <h3>Request Submitted</h3>
+            <p>We have received your data deletion request. Our team will verify your identity and follow up within 3 business days. Deletion will be completed within 30 days.</p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2><span class="section-num">5</span> Alternative Contact Method</h2>
+        <p>If you prefer to submit your request directly or have questions about the deletion process, you can reach our data protection team through the following channels:</p>
+        <div class="contact-card">
+          <p><strong>Bopadi Data Protection</strong></p>
+          <p>Email: <a href="mailto:contact@bopadi.app">contact@bopadi.app</a></p>
+          <p>Phone: <a href="tel:09065814902">0906 581 4902</a></p>
+          <p>Response Time: Within 3 business days</p>
+        </div>
+      </section>
+
+    </div>
+
+    <div class="doc-footer">
+      <p>2026 Bopadi. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="./privacy-policy.html">Privacy Policy</a>
+        <a href="./terms-of-service.html">Terms of Service</a>
+        <a href="./data-deletion.html">Data Deletion</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function handleDeletion(e) {
+      e.preventDefault();
+      var name = document.getElementById('del-name').value.trim();
+      var phone = document.getElementById('del-phone').value.trim();
+      var confirmed = document.getElementById('del-confirm').checked;
+      var delType = document.getElementById('del-type').value;
+      if (!name || !phone) { alert('Please fill in your full name and WhatsApp phone number.'); return; }
+      if (!delType) { alert('Please select the type of data you would like deleted.'); return; }
+      if (!confirmed) { alert('Please confirm that you have read and understood the deletion terms.'); return; }
+      var btn = document.getElementById('del-submit');
+      var btnText = document.getElementById('btn-text');
+      var spinner = document.getElementById('btn-spinner');
+      btn.disabled = true;
+      btnText.style.display = 'none';
+      spinner.style.display = 'block';
+      setTimeout(function() {
+        document.getElementById('formState').style.display = 'none';
+        document.getElementById('successState').style.display = 'block';
+      }, 1800);
+    }
+  </script>
+</body>
+</html>

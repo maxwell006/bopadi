@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en" data-theme="corporate-dark" data-assets-path="./assets/" class="wnrde">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+  <title>Privacy Policy | Bopadi</title>
+  <meta name="description" content="Bopadi Privacy Policy — learn how we collect, use, and protect your personal data." />
+  <link rel="icon" type="image/x-icon" href="./assets/images/bopadi_logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./assets/output.css" />
+  <style>
+    :root {
+      --page-bg: #0d0d0f;
+      --surface: #141416;
+      --surface-2: #1c1c1f;
+      --border: rgba(255,255,255,0.07);
+      --accent: #007aff;
+      --accent-glow: rgba(0,122,255,0.12);
+      --text-primary: #f0f0f2;
+      --text-secondary: rgba(240,240,242,0.6);
+      --text-muted: rgba(240,240,242,0.35);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { background: var(--page-bg); color: var(--text-primary); font-family: 'Inter', sans-serif; line-height: 1.7; min-height: 100vh; }
+
+    .site-nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(13,13,15,0.88); backdrop-filter: blur(18px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-inner {
+      max-width: 1280px; margin: 0 auto; padding: 0 2rem;
+      height: 64px; display: flex; align-items: center; justify-content: space-between;
+    }
+    .logo_img { width: 160px; }
+    .nav-links { display: flex; gap: 1.75rem; list-style: none; }
+    .nav-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.875rem; font-weight: 500; transition: color 0.2s; }
+    .nav-links a:hover, .nav-links a.active { color: var(--text-primary); }
+    .nav-cta { background: var(--accent); color: #fff; padding: 0.5rem 1.25rem; border-radius: 999px; font-size: 0.875rem; font-weight: 600; text-decoration: none; transition: opacity 0.2s; }
+    .nav-cta:hover { opacity: 0.85; }
+
+    .page-wrapper { max-width: 800px; margin: 0 auto; padding: 116px 2rem 80px; }
+
+    .doc-header { margin-bottom: 3rem; padding-bottom: 2.5rem; border-bottom: 1px solid var(--border); }
+    .doc-tag {
+      display: inline-block; background: var(--accent-glow); color: var(--accent);
+      border: 1px solid rgba(0,122,255,0.28); font-size: 0.72rem; font-weight: 700;
+      letter-spacing: 0.1em; text-transform: uppercase; padding: 0.3rem 0.85rem;
+      border-radius: 999px; margin-bottom: 1.2rem;
+    }
+    .doc-title { font-family: 'Geist', sans-serif; font-size: clamp(2rem, 5vw, 2.9rem); font-weight: 700; line-height: 1.15; color: var(--text-primary); margin-bottom: 0.85rem; }
+    .doc-meta { font-size: 0.85rem; color: var(--text-muted); }
+
+    .lead-box {
+      background: var(--surface); border: 1px solid var(--border);
+      border-left: 3px solid var(--accent); border-radius: 10px;
+      padding: 1.15rem 1.5rem; margin-bottom: 3rem;
+    }
+    .lead-box p { color: var(--text-secondary); font-size: 0.95rem; margin: 0; }
+
+    .doc-content section { margin-bottom: 2.75rem; }
+    .doc-content h2 {
+      font-family: 'Geist', sans-serif; font-size: 1.05rem; font-weight: 650;
+      color: var(--text-primary); margin-bottom: 0.9rem;
+      display: flex; align-items: center; gap: 0.65rem;
+    }
+    .section-num {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 24px; height: 24px; min-width: 24px;
+      background: var(--accent-glow); border: 1px solid rgba(0,122,255,0.25);
+      color: var(--accent); font-size: 0.68rem; font-weight: 700; border-radius: 6px;
+    }
+    .doc-content p { color: var(--text-secondary); font-size: 0.93rem; line-height: 1.8; margin-bottom: 0.85rem; }
+    .doc-content p:last-child { margin-bottom: 0; }
+    .doc-content ul { list-style: none; padding: 0; margin: 0.5rem 0 0.85rem; }
+    .doc-content ul li { color: var(--text-secondary); font-size: 0.93rem; padding: 0.38rem 0 0.38rem 1.3rem; position: relative; line-height: 1.7; }
+    .doc-content ul li::before { content: ''; position: absolute; left: 0; top: 0.88rem; width: 5px; height: 5px; border-radius: 50%; background: var(--accent); opacity: 0.55; }
+
+    .contact-card { background: var(--surface-2); border: 1px solid var(--border); border-radius: 10px; padding: 1.4rem 1.6rem; margin-top: 0.85rem; }
+    .contact-card p { margin-bottom: 0.4rem; }
+    .contact-card p:last-child { margin-bottom: 0; }
+    .contact-card a { color: var(--accent); text-decoration: none; }
+    .contact-card a:hover { text-decoration: underline; }
+    .contact-card strong { color: var(--text-primary); }
+
+    .doc-footer {
+      margin-top: 4rem; padding-top: 2rem; border-top: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;
+    }
+    .doc-footer p { color: var(--text-muted); font-size: 0.8rem; margin: 0; }
+    .footer-links { display: flex; gap: 1.5rem; }
+    .footer-links a { color: var(--text-muted); font-size: 0.8rem; text-decoration: none; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--text-primary); }
+
+    @media (max-width: 680px) {
+      .nav-links { display: none; }
+      .page-wrapper { padding: 96px 1.25rem 60px; }
+      .doc-footer { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="site-nav">
+    <div class="nav-inner">
+      <a href="./index.html"><img src="./assets/images/bopadi_logo.png" class="logo_img" alt="Bopadi" /></a>
+      <ul class="nav-links">
+        <li><a href="./index.html#home">Home</a></li>
+        <li><a href="./index.html#about-us">About Us</a></li>
+        <li><a href="./index.html#features">Features</a></li>
+        <li><a href="./index.html#faqs">FAQs</a></li>
+        <li><a href="./privacy-policy.html" class="active">Privacy Policy</a></li>
+        <li><a href="./terms-of-service.html">Terms of Service</a></li>
+        <li><a href="./data-deletion.html">Data Deletion</a></li>
+      </ul>
+      <a href="./index.html" class="nav-cta">Join Waitlist</a>
+    </div>
+  </nav>
+
+  <div class="page-wrapper">
+    <div class="doc-header">
+      <div class="doc-tag">Legal</div>
+      <h1 class="doc-title">Privacy Policy</h1>
+      <p class="doc-meta">Effective Date: March 11, 2026 &nbsp;&middot;&nbsp; Last Updated: March 11, 2026</p>
+    </div>
+
+    <div class="lead-box">
+      <p>This Privacy Policy explains how Bopadi ("we", "our", or "us") collects, uses, stores, and protects your personal information when you interact with our WhatsApp-based service. By using Bopadi, you agree to the terms described in this policy.</p>
+    </div>
+
+    <div class="doc-content">
+
+      <section>
+        <h2><span class="section-num">1</span> Information We Collect</h2>
+        <p>When you interact with Bopadi through WhatsApp or our website, we may collect the following categories of information:</p>
+        <ul>
+          <li>Full name and WhatsApp phone number provided during registration or waitlist signup</li>
+          <li>Email address when voluntarily submitted via our forms</li>
+          <li>Booking details including flight preferences, travel dates, passenger information, and billing data</li>
+          <li>VTU transaction data including network provider, meter numbers, decoder numbers, and payment amounts</li>
+          <li>Device and usage data such as IP address, browser type, and interaction timestamps collected via our website</li>
+          <li>Messages and conversation history within our WhatsApp bot, solely for the purpose of fulfilling your requests</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2><span class="section-num">2</span> How We Use Your Information</h2>
+        <p>We use the information collected to provide, maintain, and improve our services. Specifically, we use your data to:</p>
+        <ul>
+          <li>Process flight bookings, airtime purchases, data subscriptions, electricity payments, and cable TV renewals</li>
+          <li>Send booking confirmations, transaction receipts, and service notifications via WhatsApp</li>
+          <li>Respond to your inquiries and provide customer support</li>
+          <li>Notify you of waitlist updates, product launches, and relevant service announcements</li>
+          <li>Prevent fraud, enforce our terms, and ensure the security of all transactions</li>
+          <li>Comply with applicable Nigerian laws and regulatory requirements</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2><span class="section-num">3</span> Legal Basis for Processing</h2>
+        <p>We process your personal data on the following legal grounds:</p>
+        <ul>
+          <li>Contract performance: processing necessary to deliver the services you requested</li>
+          <li>Legitimate interests: fraud prevention, security monitoring, and service improvement</li>
+          <li>Consent: where you have explicitly agreed to receive marketing communications or notifications</li>
+          <li>Legal obligation: compliance with applicable Nigerian laws and financial regulations</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2><span class="section-num">4</span> Sharing of Information</h2>
+        <p>We do not sell your personal data. We may share your information only in the following circumstances:</p>
+        <ul>
+          <li>With airline partners, payment processors, utility providers, and other third-party service providers necessary to fulfill your booking or payment requests</li>
+          <li>With trusted technology vendors who operate under strict data processing agreements and may not use your data independently</li>
+          <li>With regulatory authorities, law enforcement agencies, or courts when required by applicable law</li>
+          <li>In connection with a merger, acquisition, or sale of assets, in which case you will be notified in advance</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2><span class="section-num">5</span> Data Retention</h2>
+        <p>We retain your personal data only as long as necessary to deliver our services and comply with our legal obligations. Transaction records are typically retained for a minimum of five years in accordance with Nigerian financial regulations. You may request deletion of your data at any time by visiting our Data Deletion page.</p>
+      </section>
+
+      <section>
+        <h2><span class="section-num">6</span> Data Security</h2>
+        <p>We employ industry-standard security measures to protect your information, including:</p>
+        <ul>
+          <li>End-to-end encryption for all WhatsApp communications</li>
+          <li>Secure HTTPS connections across our website and API infrastructure</li>
+          <li>Restricted access controls ensuring only authorized personnel can access personal data</li>
+          <li>Regular security audits and vulnerability assessments</li>
+        </ul>
+        <p>While we take every reasonable precaution, no method of transmission over the internet is completely secure. We encourage you to avoid sharing sensitive financial credentials directly in chat messages.</p>
+      </section>
+
+      <section>
+        <h2><span class="section-num">7</span> Your Rights</h2>
+        <p>As a user of Bopadi, you have the following rights regarding your personal data:</p>
+        <ul>
+          <li>Access: request a copy of the personal data we hold about you</li>
+          <li>Correction: request corrections to inaccurate or incomplete information</li>
+          <li>Deletion: request the deletion of your personal data, subject to legal retention requirements</li>
+          <li>Objection: object to certain processing activities, including direct marketing</li>
+          <li>Portability: request your data in a structured, machine-readable format where applicable</li>
+        </ul>
+        <p>To exercise any of these rights, please contact us using the information below.</p>
+      </section>
+
+      <section>
+        <h2><span class="section-num">8</span> Cookies and Tracking</h2>
+        <p>Our website may use cookies and similar tracking technologies to improve your browsing experience and gather analytical data. You may configure your browser to refuse cookies; however, some features of our website may not function correctly as a result.</p>
+      </section>
+
+      <section>
+        <h2><span class="section-num">9</span> Children's Privacy</h2>
+        <p>Bopadi is not directed at individuals under the age of 18. We do not knowingly collect personal information from minors. If we become aware that we have inadvertently collected data from a child, we will take prompt steps to delete that information.</p>
+      </section>
+
+      <section>
+        <h2><span class="section-num">10</span> Changes to This Policy</h2>
+        <p>We may update this Privacy Policy from time to time to reflect changes in our practices or applicable law. We will notify you of material changes by posting the updated policy on our website and, where appropriate, via WhatsApp notification. Your continued use of our services after any update constitutes acceptance of the revised policy.</p>
+      </section>
+
+      <section>
+        <h2><span class="section-num">11</span> Contact Us</h2>
+        <p>If you have any questions, concerns, or requests related to this Privacy Policy, please reach out to us through any of the following channels:</p>
+        <div class="contact-card">
+          <p><strong>Bopadi</strong></p>
+          <p>Email: <a href="mailto:contact@bopadi.app">contact@bopadi.app</a></p>
+          <p>Phone: <a href="tel:09065814902">0906 581 4902</a></p>
+        </div>
+      </section>
+
+    </div>
+
+    <div class="doc-footer">
+      <p>2026 Bopadi. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="./privacy-policy.html">Privacy Policy</a>
+        <a href="./terms-of-service.html">Terms of Service</a>
+        <a href="./data-deletion.html">Data Deletion</a>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

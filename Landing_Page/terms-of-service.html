@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en" data-theme="corporate-dark" data-assets-path="./assets/" class="wnrde">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+  <title>Terms of Service | Bopadi</title>
+  <meta name="description" content="Bopadi Terms of Service — the rules and conditions governing your use of our WhatsApp booking and VTU platform." />
+  <link rel="icon" type="image/x-icon" href="./assets/images/bopadi_logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./assets/output.css" />
+  <style>
+    :root {
+      --page-bg: #0d0d0f;
+      --surface: #141416;
+      --surface-2: #1c1c1f;
+      --border: rgba(255,255,255,0.07);
+      --accent: #007aff;
+      --accent-glow: rgba(0,122,255,0.12);
+      --text-primary: #f0f0f2;
+      --text-secondary: rgba(240,240,242,0.6);
+      --text-muted: rgba(240,240,242,0.35);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { background: var(--page-bg); color: var(--text-primary); font-family: 'Inter', sans-serif; line-height: 1.7; min-height: 100vh; }
+
+    .site-nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(13,13,15,0.88); backdrop-filter: blur(18px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-inner {
+      max-width: 1280px; margin: 0 auto; padding: 0 2rem;
+      height: 64px; display: flex; align-items: center; justify-content: space-between;
+    }
+    .logo_img { width: 160px; }
+    .nav-links { display: flex; gap: 1.75rem; list-style: none; }
+    .nav-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.875rem; font-weight: 500; transition: color 0.2s; }
+    .nav-links a:hover, .nav-links a.active { color: var(--text-primary); }
+    .nav-cta { background: var(--accent); color: #fff; padding: 0.5rem 1.25rem; border-radius: 999px; font-size: 0.875rem; font-weight: 600; text-decoration: none; transition: opacity 0.2s; }
+    .nav-cta:hover { opacity: 0.85; }
+
+    .page-wrapper { max-width: 800px; margin: 0 auto; padding: 116px 2rem 80px; }
+
+    .doc-header { margin-bottom: 3rem; padding-bottom: 2.5rem; border-bottom: 1px solid var(--border); }
+    .doc-tag {
+      display: inline-block; background: var(--accent-glow); color: var(--accent);
+      border: 1px solid rgba(0,122,255,0.28); font-size: 0.72rem; font-weight: 700;
+      letter-spacing: 0.1em; text-transform: uppercase; padding: 0.3rem 0.85rem;
+      border-radius: 999px; margin-bottom: 1.2rem;
+    }
+    .doc-title { font-family: 'Geist', sans-serif; font-size: clamp(2rem, 5vw, 2.9rem); font-weight: 700; line-height: 1.15; color: var(--text-primary); margin-bottom: 0.85rem; }
+    .doc-meta { font-size: 0.85rem; color: var(--text-muted); }
+
+    .lead-box {
+      background: var(--surface); border: 1px solid var(--border);
+      border-left: 3px solid var(--accent); border-radius: 10px;
+      padding: 1.15rem 1.5rem; margin-bottom: 3rem;
+    }
+    .lead-box p { color: var(--text-secondary); font-size: 0.95rem; margin: 0; }
+
+    .doc-content section { margin-bottom: 2.75rem; }
+    .doc-content h2 {
+      font-family: 'Geist', sans-serif; font-size: 1.05rem; font-weight: 650;
+      color: var(--text-primary); margin-bottom: 0.9rem;
+      display: flex; align-items: center; gap: 0.65rem;
+    }
+    .section-num {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 24px; height: 24px; min-width: 24px;
+      background: var(--accent-glow); border: 1px solid rgba(0,122,255,0.25);
+      color: var(--accent); font-size: 0.68rem; font-weight: 700; border-radius: 6px;
+    }
+    .doc-content p { color: var(--text-secondary); font-size: 0.93rem; line-height: 1.8; margin-bottom: 0.85rem; }
+    .doc-content p:last-child { margin-bottom: 0; }
+    .doc-content ul { list-style: none; padding: 0; margin: 0.5rem 0 0.85rem; }
+    .doc-content ul li { color: var(--text-secondary); font-size: 0.93rem; padding: 0.38rem 0 0.38rem 1.3rem; position: relative; line-height: 1.7; }
+    .doc-content ul li::before { content: ''; position: absolute; left: 0; top: 0.88rem; width: 5px; height: 5px; border-radius: 50%; background: var(--accent); opacity: 0.55; }
+
+    .warning-box {
+      background: rgba(255,149,0,0.08); border: 1px solid rgba(255,149,0,0.2);
+      border-left: 3px solid #ff9500; border-radius: 10px;
+      padding: 1.1rem 1.5rem; margin: 1rem 0;
+    }
+    .warning-box p { color: rgba(240,240,242,0.7); font-size: 0.9rem; margin: 0; }
+    .warning-box strong { color: #ff9500; }
+
+    .contact-card { background: var(--surface-2); border: 1px solid var(--border); border-radius: 10px; padding: 1.4rem 1.6rem; margin-top: 0.85rem; }
+    .contact-card p { margin-bottom: 0.4rem; }
+    .contact-card p:last-child { margin-bottom: 0; }
+    .contact-card a { color: var(--accent); text-decoration: none; }
+    .contact-card a:hover { text-decoration: underline; }
+    .contact-card strong { color: var(--text-primary); }
+
+    .doc-footer {
+      margin-top: 4rem; padding-top: 2rem; border-top: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;
+    }
+    .doc-footer p { color: var(--text-muted); font-size: 0.8rem; margin: 0; }
+    .footer-links { display: flex; gap: 1.5rem; }
+    .footer-links a { color: var(--text-muted); font-size: 0.8rem; text-decoration: none; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--text-primary); }
+
+    @media (max-width: 680px) {
+      .nav-links { display: none; }
+      .page-wrapper { padding: 96px 1.25rem 60px; }
+      .doc-footer { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="site-nav">
+    <div class="nav-inner">
+      <a href="./index.html"><img src="./assets/images/bopadi_logo.png" class="logo_img" alt="Bopadi" /></a>
+      <ul class="nav-links">
+        <li><a href="./index.html#home">Home</a></li>
+        <li><a href="./index.html#about-us">About Us</a></li>
+        <li><a href="./index.html#features">Features</a></li>
+        <li><a href="./index.html#faqs">FAQs</a></li>
+        <li><a href="./privacy-policy.html">Privacy Policy</a></li>
+        <li><a href="./terms-of-service.html" class="active">Terms of Service</a></li>
+        <li><a href="./data-deletion.html">Data Deletion</a></li>
+      </ul>
+      <a href="./index.html" class="nav-cta">Join Waitlist</a>
+    </div>
+  </nav>
+
+  <div class="page-wrapper">
+    <div class="doc-header">
+      <div class="doc-tag">Legal</div>
+      <h1 class="doc-title">Terms of Service</h1>
+      <p class="doc-meta">Effective Date: March 11, 2026 &nbsp;&middot;&nbsp; Last Updated: March 11, 2026</p>
+    </div>
+
+    <div class="lead-box">
+      <p>These Terms of Service govern your access to and use of Bopadi's WhatsApp-based flight booking and VTU (Virtual Top-Up) platform. Please read them carefully before using our services. By accessing or using Bopadi, you agree to be bound by these terms.</p>
+    </div>
+
+    <div class="doc-content">
+
+      <section>
+        <h2><span class="section-num">1</span> Acceptance of Terms</h2>
+        <p>By sending a message to our WhatsApp bot, joining our waitlist, or visiting our website, you confirm that you are at least 18 years of age, have read and understood these Terms of Service, and agree to be legally bound by them. If you do not agree, please refrain from using our services.</p>
+      </section>
+
+      <section>
+        <h2><span class="section-num">2</span> Description of Services</h2>
+        <p>Bopadi provides a conversational platform accessible via WhatsApp that enables users to:</p>
+        <ul>
+          <li>Search, compare, and book domestic and international flights</li>
+          <li>Purchase airtime and data bundles for all major Nigerian mobile networks including MTN, Airtel, Glo, and 9mobile</li>
+          <li>Pay electricity bills for all Distribution Companies (DISCOs) in Nigeria</li>
+          <li>Renew cable TV subscriptions including DSTV, GOtv, and Startimes</li>
+          <li>Receive booking confirmations and transaction receipts directly via WhatsApp</li>
+        </ul>
+        <p>Bopadi acts as an intermediary platform. We do not operate airlines, mobile networks, utility companies, or cable TV providers.</p>
+      </section>
+
+      <section>
+        <h2><span class="section-num">3</span> User Responsibilities</h2>
+        <p>When using Bopadi, you agree to:</p>
+        <ul>
+          <li>Provide accurate, current, and complete information when making bookings or payments</li>
+          <li>Ensure sufficient funds are available before initiating any transaction</li>
+          <li>Keep your WhatsApp account and any associated credentials secure</li>
+          <li>Not use our services for any fraudulent, unlawful, or unauthorized purpose</li>
+          <li>Not attempt to reverse-engineer, disrupt, or interfere with our platform or its underlying infrastructure</li>
+          <li>Comply with all applicable Nigerian laws and regulations in connection with your use of our services</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2><span class="section-num">4</span> Bookings and Transactions</h2>
+        <p>All flight bookings and VTU transactions are subject to availability and confirmation. A transaction is considered complete only when you receive a written confirmation message via WhatsApp. Bopadi reserves the right to cancel or decline any transaction that it reasonably suspects to be fraudulent or in violation of these terms.</p>
+        <p>Prices displayed are subject to change until a booking is confirmed and payment is successfully processed. Bopadi is not liable for price fluctuations between the time you initiate and complete a transaction.</p>
+      </section>
+
+      <section>
+        <h2><span class="section-num">5</span> Payments</h2>
+        <p>All payments are processed through secure third-party payment gateways. By initiating a payment, you authorize Bopadi to charge the specified amount to your selected payment method. You are responsible for ensuring that your payment details are accurate and that sufficient funds are available.</p>
+        <div class="warning-box">
+          <p><strong>Important:</strong> Bopadi will never ask you to share your bank PIN, card CVV, or online banking password through WhatsApp or any other channel. Do not share such information with anyone claiming to represent Bopadi.</p>
+        </div>
+      </section>
+
+      <section>
+        <h2><span class="section-num">6</span> Refunds and Cancellations</h2>
+        <p>Refund and cancellation policies vary depending on the type of service:</p>
+        <ul>
+          <li>Flight bookings are subject to the refund and cancellation policies of the respective airline. Bopadi will communicate applicable fees and conditions before confirming your booking</li>
+          <li>Completed VTU transactions including airtime, data, electricity, and cable TV payments are generally non-refundable once processed by the respective provider</li>
+          <li>In the event of a failed transaction where your account was debited, Bopadi will investigate and initiate a reversal within 3 to 5 business days</li>
+        </ul>
+        <p>To request a refund or report a transaction issue, please contact us immediately at contact@bopadi.app.</p>
+      </section>
+
+      <section>
+        <h2><span class="section-num">7</span> Intellectual Property</h2>
+        <p>All content, branding, software, and materials associated with Bopadi including the name, logo, WhatsApp bot, and website are the exclusive intellectual property of Bopadi or its licensors. You may not copy, reproduce, distribute, or create derivative works from our materials without our prior written consent.</p>
+      </section>
+
+      <section>
+        <h2><span class="section-num">8</span> Limitation of Liability</h2>
+        <p>To the fullest extent permitted by applicable law, Bopadi shall not be liable for any indirect, incidental, special, or consequential damages arising from your use of our services. This includes, but is not limited to, loss of revenue, loss of data, flight delays or cancellations caused by airlines, or service outages by utility providers.</p>
+        <p>Our total liability to you for any claim arising out of or relating to these terms or our services shall not exceed the amount you paid for the specific transaction that gives rise to the claim.</p>
+      </section>
+
+      <section>
+        <h2><span class="section-num">9</span> Third-Party Services</h2>
+        <p>Bopadi integrates with third-party providers to deliver its services. We are not responsible for the actions, policies, pricing, or availability of these providers. Any disputes regarding a flight, utility service, or cable TV subscription should be directed to the respective provider, although we will assist where reasonably possible.</p>
+      </section>
+
+      <section>
+        <h2><span class="section-num">10</span> Account Suspension and Termination</h2>
+        <p>Bopadi reserves the right to suspend or permanently terminate your access to our services, without prior notice, if we determine that you have violated these Terms of Service, engaged in fraudulent activity, or posed a security risk to our platform or other users.</p>
+      </section>
+
+      <section>
+        <h2><span class="section-num">11</span> Governing Law</h2>
+        <p>These Terms of Service are governed by and construed in accordance with the laws of the Federal Republic of Nigeria. Any disputes arising from these terms shall be subject to the exclusive jurisdiction of the courts of Nigeria.</p>
+      </section>
+
+      <section>
+        <h2><span class="section-num">12</span> Changes to These Terms</h2>
+        <p>We may revise these Terms of Service at any time. We will notify you of significant changes by posting the updated terms on our website and, where appropriate, via WhatsApp. Your continued use of Bopadi after such changes constitutes your acceptance of the revised terms.</p>
+      </section>
+
+      <section>
+        <h2><span class="section-num">13</span> Contact Us</h2>
+        <p>If you have any questions about these Terms of Service, please contact us:</p>
+        <div class="contact-card">
+          <p><strong>Bopadi</strong></p>
+          <p>Email: <a href="mailto:contact@bopadi.app">contact@bopadi.app</a></p>
+          <p>Phone: <a href="tel:09065814902">0906 581 4902</a></p>
+        </div>
+      </section>
+
+    </div>
+
+    <div class="doc-footer">
+      <p>2026 Bopadi. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="./privacy-policy.html">Privacy Policy</a>
+        <a href="./terms-of-service.html">Terms of Service</a>
+        <a href="./data-deletion.html">Data Deletion</a>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
