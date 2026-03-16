@@ -257,6 +257,44 @@
           transform: translateY(0);
         }
       }
+
+      /* ===== LIGHT THEME: modal overrides ===== */
+      [data-theme="corporate-light"] .modal {
+        background-color: #ffffff;
+        color: #111111;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+      }
+      [data-theme="corporate-light"] .modal p { color: #555; }
+      [data-theme="corporate-light"] label { color: #555; }
+      [data-theme="corporate-light"] .modal input {
+        background: #f3f3f7;
+        border: 1px solid #d0d0da;
+        color: #111;
+      }
+      [data-theme="corporate-light"] .modal input:focus { border-color: #1D378D; }
+      [data-theme="corporate-light"] .close-btn { color: #777; }
+      [data-theme="corporate-light"] .close-btn:hover { color: #111; }
+
+      /* ===== THEME TOGGLE BUTTON ===== */
+      #themeToggleBtn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        border: 1px solid color-mix(in oklab, var(--color-base-content) 18%, transparent);
+        background: color-mix(in oklab, var(--color-base-content) 6%, transparent);
+        color: var(--color-base-content);
+        cursor: pointer;
+        transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+        flex-shrink: 0;
+      }
+      #themeToggleBtn:hover {
+        transform: rotate(22deg) scale(1.1);
+        border-color: var(--color-primary);
+        color: var(--color-primary);
+      }
     </style>
   </head>
 
@@ -322,7 +360,15 @@
                   alt=""
                 />
               </a>
-              <div class="flex items-center f9dzb md:hidden">
+              <div class="flex items-center f9dzb md:hidden gap-2">
+                <button
+                  id="themeToggleBtnMobile"
+                  aria-label="Toggle theme"
+                  style="display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;border:1px solid color-mix(in oklab, var(--color-base-content) 18%, transparent);background:color-mix(in oklab, var(--color-base-content) 6%, transparent);color:var(--color-base-content);cursor:pointer;"
+                >
+                  <span id="themeIconSunMobile" class="icon-[tabler--sun] size-5"></span>
+                  <span id="themeIconMoonMobile" class="icon-[tabler--moon] size-5" style="display:none"></span>
+                </button>
                 <button
                   type="button"
                   class="collapse-toggle btn pqebt kt9dk btn-square"
@@ -354,24 +400,17 @@
                   >Features</a
                 >
                 <a href="#faqs" class="hover:text-primary nav-link">FAQs</a>
-                <a
-                  href="./privacy-policy.html"
-                  class="hover:text-primary nav-link"
-                  >Privacy Policy</a
-                >
-                <a
-                  href="./terms-of-service.html"
-                  class="hover:text-primary nav-link"
-                  >Terms of Service</a
-                >
-                <!-- <a
-                  href="./data-deletion.html"
-                  class="hover:text-primary nav-link"
-                  >Data Deletion</a
-                > -->
               </div>
             </div>
-            <div class="zrq5j max-md:hidden">
+            <div class="zrq5j max-md:hidden flex items-center gap-3">
+              <button
+                id="themeToggleBtn"
+                aria-label="Toggle theme"
+                title="Toggle light/dark mode"
+              >
+                <span id="themeIconSun" class="icon-[tabler--sun] size-5"></span>
+                <span id="themeIconMoon" class="icon-[tabler--moon] size-5" style="display:none"></span>
+              </button>
               <a href="#" id="openModalBtn" class="btn btn-primary"
                 >Join Waitlist</a
               >
@@ -1293,5 +1332,44 @@
     >
       <span class="icon-[tabler--chevron-up] size-5 shrink-0"></span>
     </button>
+    <!-- Theme Toggle JS -->
+    <script>
+      (function () {
+        const DARK = "corporate-dark";
+        const LIGHT = "corporate-light";
+        const html = document.documentElement;
+
+        // Apply saved theme on load (default: dark)
+        const saved = localStorage.getItem("bopadi-theme") || DARK;
+        html.setAttribute("data-theme", saved);
+
+        function syncIcons(theme) {
+          const isDark = theme === DARK;
+          // Desktop
+          const sunD = document.getElementById("themeIconSun");
+          const moonD = document.getElementById("themeIconMoon");
+          if (sunD) sunD.style.display = isDark ? "" : "none";
+          if (moonD) moonD.style.display = isDark ? "none" : "";
+          // Mobile
+          const sunM = document.getElementById("themeIconSunMobile");
+          const moonM = document.getElementById("themeIconMoonMobile");
+          if (sunM) sunM.style.display = isDark ? "" : "none";
+          if (moonM) moonM.style.display = isDark ? "none" : "";
+        }
+
+        function toggle() {
+          const next = html.getAttribute("data-theme") === DARK ? LIGHT : DARK;
+          html.setAttribute("data-theme", next);
+          localStorage.setItem("bopadi-theme", next);
+          syncIcons(next);
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+          syncIcons(html.getAttribute("data-theme"));
+          document.getElementById("themeToggleBtn")?.addEventListener("click", toggle);
+          document.getElementById("themeToggleBtnMobile")?.addEventListener("click", toggle);
+        });
+      })();
+    </script>
   </body>
 </html>
