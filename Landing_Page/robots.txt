@@ -1,0 +1,13 @@
+# Bopadi robots.txt
+# https://bopadi.app
+
+User-agent: *
+Allow: /
+
+# Block access to any sensitive or build folders (adjust if needed)
+Disallow: /node_modules/
+Disallow: /src/
+Disallow: /.env
+
+# Sitemap location
+Sitemap: https://bopadi.app/sitemap.xml
