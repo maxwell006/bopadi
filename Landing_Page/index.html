@@ -227,7 +227,6 @@
       }
     </script>
 
-    <!-- ⑫ Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -281,6 +280,7 @@
       .logo_img {
         width: 250px;
       }
+
       @media (max-width: 500px) {
         .logo_img {
           width: 200px;
@@ -327,6 +327,7 @@
         cursor: pointer;
         transition: color 0.3s ease;
       }
+
       .close-btn:hover {
         color: #fff;
       }
@@ -337,6 +338,7 @@
         font-weight: 700;
         margin-bottom: 8px;
       }
+
       .modal p {
         text-align: center;
         color: #bbb;
@@ -366,6 +368,7 @@
         outline: none;
         transition: border 0.2s ease;
       }
+
       .modal input:focus {
         border-color: #007aff;
       }
@@ -383,6 +386,7 @@
         cursor: pointer;
         transition: background 0.3s ease;
       }
+
       .modal button:hover {
         opacity: 0.85;
       }
@@ -401,45 +405,51 @@
           transform: rotate(360deg);
         }
       }
+
       @keyframes fadeIn {
         from {
           opacity: 0;
           transform: translateY(20px);
         }
+
         to {
           opacity: 1;
           transform: translateY(0);
         }
       }
 
-      /* ── Light theme modal overrides ── */
       [data-theme="corporate-light"] .modal {
         background-color: #ffffff;
         color: #111111;
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
       }
+
       [data-theme="corporate-light"] .modal p {
         color: #555;
       }
+
       [data-theme="corporate-light"] label {
         color: #555;
       }
+
       [data-theme="corporate-light"] .modal input {
         background: #f3f3f7;
         border: 1px solid #d0d0da;
         color: #111;
       }
+
       [data-theme="corporate-light"] .modal input:focus {
         border-color: #1d378d;
       }
+
       [data-theme="corporate-light"] .close-btn {
         color: #777;
       }
+
       [data-theme="corporate-light"] .close-btn:hover {
         color: #111;
       }
 
-      /* ── Theme toggle button ── */
       #themeToggleBtn {
         display: inline-flex;
         align-items: center;
@@ -462,16 +472,305 @@
           background 0.25s ease;
         flex-shrink: 0;
       }
+
       #themeToggleBtn:hover {
         transform: rotate(22deg) scale(1.1);
         border-color: var(--color-primary);
         color: var(--color-primary);
+      }
+
+      /* ── Hero WhatsApp CTA ── */
+      .hero-wa-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 14px;
+        background: #25d366;
+        color: #fff;
+        padding: 14px 28px;
+        border-radius: 50px;
+        font-weight: 700;
+        font-size: 16px;
+        text-decoration: none;
+        box-shadow: 0 8px 32px rgba(37, 211, 102, 0.35);
+        transition:
+          transform 0.2s ease,
+          box-shadow 0.2s ease,
+          background 0.2s ease;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .hero-wa-btn::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          135deg,
+          rgba(255, 255, 255, 0.15) 0%,
+          transparent 60%
+        );
+        border-radius: inherit;
+      }
+
+      .hero-wa-btn:hover {
+        transform: translateY(-3px) scale(1.03);
+        box-shadow: 0 14px 40px rgba(37, 211, 102, 0.45);
+        background: #20c05c;
+      }
+
+      .hero-wa-btn img {
+        width: 28px;
+        height: 28px;
+        object-fit: contain;
+        filter: brightness(0) invert(1);
+      }
+
+      .hero-wa-btn .btn-label {
+        display: flex;
+        flex-direction: column;
+        line-height: 1.2;
+      }
+
+      .hero-wa-btn .btn-label span:first-child {
+        font-size: 11px;
+        font-weight: 400;
+        opacity: 0.85;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+      }
+
+      .hero-wa-btn .btn-label span:last-child {
+        font-size: 16px;
+        font-weight: 700;
+      }
+
+      @media (max-width: 640px) {
+        .hero-wa-btn {
+          width: 100%;
+          justify-content: center;
+          padding: 14px 20px;
+        }
+      }
+
+      /* ── Section WhatsApp CTA (About, Features, Benefits, FAQ) ── */
+      .wa-cta-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        background: #25d366;
+        color: #fff !important;
+        padding: 12px 24px;
+        border-radius: 50px;
+        font-weight: 600;
+        font-size: 15px;
+        text-decoration: none;
+        border: none;
+        cursor: pointer;
+        transition:
+          transform 0.2s ease,
+          box-shadow 0.2s ease,
+          background 0.2s ease;
+        box-shadow: 0 4px 18px rgba(37, 211, 102, 0.28);
+        width: fit-content;
+      }
+
+      .wa-cta-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 28px rgba(37, 211, 102, 0.4);
+        background: #20c05c;
+      }
+
+      .wa-cta-btn img {
+        width: 22px;
+        height: 22px;
+        object-fit: contain;
+        filter: brightness(0) invert(1);
+      }
+
+      @media (max-width: 640px) {
+        .wa-cta-btn {
+          width: 100%;
+          justify-content: center;
+        }
+      }
+
+      /* ── FAQ bottom CTA block ── */
+      .faq-cta-block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        margin-top: 48px;
+        padding: 32px;
+        border-radius: 16px;
+        border: 1px solid rgba(37, 211, 102, 0.2);
+        background: rgba(37, 211, 102, 0.05);
+        text-align: center;
+      }
+
+      .faq-cta-block p {
+        font-size: 15px;
+        opacity: 0.7;
+        margin: 0;
+      }
+
+      /* ── FAB WhatsApp Group ── */
+      .fab-whatsapp {
+        position: fixed;
+        bottom: 28px;
+        right: 24px;
+        z-index: 999;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 10px;
+      }
+
+      .fab-tooltip {
+        background: #1c1c1e;
+        color: #fff;
+        font-size: 12px;
+        font-weight: 600;
+        padding: 6px 14px;
+        border-radius: 20px;
+        white-space: nowrap;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+        opacity: 0;
+        transform: translateX(10px);
+        transition:
+          opacity 0.25s ease,
+          transform 0.25s ease;
+        pointer-events: none;
+      }
+
+      .fab-whatsapp:hover .fab-tooltip {
+        opacity: 1;
+        transform: translateX(0);
+      }
+
+      .fab-btn {
+        width: 58px;
+        height: 58px;
+        border-radius: 50%;
+        background: #25d366;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 6px 24px rgba(37, 211, 102, 0.45);
+        text-decoration: none;
+        transition:
+          transform 0.2s ease,
+          box-shadow 0.2s ease;
+        border: 3px solid rgba(255, 255, 255, 0.2);
+        animation: fabPulse 2.5s ease-in-out infinite;
+        flex-shrink: 0;
+      }
+
+      .fab-btn:hover {
+        transform: scale(1.1);
+        box-shadow: 0 10px 32px rgba(37, 211, 102, 0.55);
+        animation: none;
+      }
+
+      .fab-btn img {
+        width: 30px;
+        height: 30px;
+        object-fit: contain;
+        filter: brightness(0) invert(1);
+      }
+
+      .fab-badge {
+        position: absolute;
+        top: -4px;
+        right: -4px;
+        background: #ff3b30;
+        color: #fff;
+        font-size: 9px;
+        font-weight: 700;
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid #fff;
+      }
+
+      .fab-btn-wrap {
+        position: relative;
+      }
+
+      @keyframes fabPulse {
+        0%,
+        100% {
+          box-shadow: 0 6px 24px rgba(37, 211, 102, 0.45);
+        }
+
+        50% {
+          box-shadow:
+            0 6px 36px rgba(37, 211, 102, 0.7),
+            0 0 0 8px rgba(37, 211, 102, 0.1);
+        }
+      }
+
+      @media (max-width: 640px) {
+        .fab-whatsapp {
+          bottom: 20px;
+          right: 16px;
+        }
+
+        .fab-btn {
+          width: 52px;
+          height: 52px;
+        }
+
+        .fab-btn img {
+          width: 26px;
+          height: 26px;
+        }
+      }
+
+      [data-theme="corporate-light"] .fab-tooltip {
+        background: #fff;
+        color: #111;
+        border: 1px solid #e5e5e5;
+      }
+
+      [data-theme="corporate-light"] .faq-cta-block {
+        border-color: rgba(37, 211, 102, 0.3);
+        background: rgba(37, 211, 102, 0.07);
       }
     </style>
   </head>
 
   <body>
     <div class="bg-base-100">
+      <!-- Waitlist Modal -->
+      <div id="waitlistModal" class="modal-overlay" style="display: none">
+        <div class="modal">
+          <span class="close-btn" id="closeModalBtn">&times;</span>
+          <h2>Join the Waitlist</h2>
+          <p>We'll notify you when Bopadi is available</p>
+          <form id="waitlistForm">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" placeholder="John Doe" required />
+            <label for="phone">WhatsApp Phone</label>
+            <input type="tel" id="phone" placeholder="090 000 0000" required />
+            <label for="email">Email address</label>
+            <input
+              type="email"
+              id="email"
+              placeholder="john@appleseed.com"
+              required
+            />
+            <button type="submit" id="waitlistBtn">
+              <span class="btn-text">Join Waitlist</span>
+              <span class="loader" style="display: none"></span>
+            </button>
+          </form>
+        </div>
+      </div>
+
       <header
         class="qqtj1 max-sm:bg-base-100 intersect-once intersect:motion-preset-slide-down-lg intersect:motion-duration-800 intersect:motion-opacity-in-0 intersect:motion-delay-100 fixed top-0 f39un w-full transition-all duration-300"
         id="header"
@@ -578,9 +877,13 @@
                   style="display: none"
                 ></span>
               </button>
-              <a href="https://wa.me/message/7XF4HGO5TSRAP1" id="openModalBtn" class="btn btn-primary"
-                >Start on WhatsApp</a
+              <a
+                href="https://wa.me/message/7XF4HGO5TSRAP1"
+                target="_blank"
+                class="btn btn-primary"
               >
+                Start on WhatsApp
+              </a>
             </div>
           </div>
         </nav>
@@ -619,50 +922,48 @@
                   manage your travel all within WhatsApp.
                 </p>
 
+                <!-- Hero CTA -->
                 <div
-                  class="intersect-once intersect:motion-preset-slide-down intersect:motion-duration-800 intersect:motion-opacity-in-0 intersect:motion-delay-700 flex items-center justify-center gap-4 max-md:flex-col"
+                  class="intersect-once intersect:motion-preset-slide-down intersect:motion-duration-800 intersect:motion-opacity-in-0 intersect:motion-delay-700 flex flex-col items-center gap-4 w-full max-w-sm mx-auto"
                 >
                   <a
                     href="https://wa.me/message/7XF4HGO5TSRAP1"
                     target="_blank"
-                    id="openModalBtn"
-                    class="rounded-field shadow-base-300/20 flex items-center gap-4 kvvjz hqyv3 u032e shadow-sm"
+                    class="hero-wa-btn"
                   >
-                    <span class="flex items-center gap-4">
-                      <img
-                        src="./assets/images/whatsapp.png"
-                        alt="Whatsapp Image"
-                        class="yfd9m"
-                      />
-                      <span class="flex flex-col jgcej zvy52">
-                        <span class="text-xs">Start on</span>
-                        <span class="font-medium">WhatsApp</span>
-                      </span>
+                    <img src="./assets/images/whatsapp.png" alt="WhatsApp" />
+                    <span class="btn-label">
+                      <span>Free — No app needed</span>
+                      <span>Start on WhatsApp Now</span>
                     </span>
                   </a>
+                  <p class="text-base-content/50 text-xs">
+                    🔒 Secure &nbsp;·&nbsp; ⚡ Instant &nbsp;·&nbsp; 🇳🇬 Built
+                    for Nigeria
+                  </p>
+                </div>
 
-                  <div
-                    class="intersect-once intersect:motion-preset-slide-down intersect:motion-duration-800 intersect:motion-opacity-in-0 intersect:motion-delay-900 absolute end-[-20%] top-[80%] hidden md:block rtl:end-[100%]"
+                <div
+                  class="intersect-once intersect:motion-preset-slide-down intersect:motion-duration-800 intersect:motion-opacity-in-0 intersect:motion-delay-900 absolute end-[-20%] top-[80%] hidden md:block rtl:end-[100%]"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="56"
+                    height="131"
+                    viewBox="0 0 56 131"
+                    fill="none"
                   >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="56"
-                      height="131"
-                      viewBox="0 0 56 131"
-                      fill="none"
-                    >
-                      <path
-                        id="arrowPath"
-                        fill-rule="evenodd"
-                        clip-rule="evenodd"
-                        d="M21.2715 121.402C20.9656 121.843 20.7603 122.451 20.3456 122.675C19.2321 123.278 18.0663 124.015 16.8539 124.163C12.7504 124.664 9.46105 126.927 5.97751 128.799C5.11012 129.264 4.24702 129.78 3.31794 130.079C2.6821 130.285 1.93451 130.225 1.24601 130.164C0.57884 130.108 0.0311324 129.12 0.331698 128.533C0.650394 127.911 1.03298 127.309 1.46627 126.765C2.79557 125.097 4.24057 123.516 5.49143 121.793C6.91306 119.838 8.10279 117.744 8.36883 115.244C8.47112 114.284 9.05975 113.698 10.0976 113.784C11.2008 113.876 11.9184 114.768 11.6632 115.864C11.3731 117.103 10.9338 118.303 10.5545 119.534C11.3617 120.243 11.8157 119.489 12.2747 119.076C17.0699 114.776 20.8326 109.606 24.5754 104.42C26.2336 102.124 27.8484 99.7852 29.6346 97.59C33.1661 93.2494 36.0019 88.5701 37.3652 83.084C38.0154 80.4669 38.7709 77.8765 39.3822 75.2526C39.6617 74.0515 39.7055 72.7942 39.8904 71.2734C36.8547 71.7014 34.2004 72.1187 31.5337 72.4414C26.708 73.0253 21.5987 70.0913 20.2954 65.7683C18.3052 59.1543 20.4846 53.4362 27.1864 50.2748C28.9448 49.4455 30.8539 49.8285 32.5887 50.5072C34.7287 51.3428 36.5653 52.6243 37.8703 54.6301C39.4286 57.0321 40.7645 59.5013 41.3754 62.3296C41.6368 63.5386 42.0458 64.7159 42.4955 66.2876C43.1787 65.6863 43.632 65.4024 43.9386 65.0057C49.7961 57.4425 52.7139 48.7615 52.7134 39.3011C52.7141 30.6057 50.1567 22.5366 45.0679 15.3332C42.696 11.9781 40.567 8.4467 38.4023 4.94749C37.8175 4.00033 37.4527 2.89917 37.1088 1.82978C37.0113 1.53018 37.2783 0.827138 37.507 0.763854C37.9744 0.632407 38.5748 0.699195 39.0323 0.892172C39.3774 1.03819 39.6312 1.47847 39.8524 1.83148C42.6284 6.27698 45.3814 10.7373 48.1599 15.1803C55.5246 26.9526 57.14 39.4939 53.1415 52.757C51.2733 58.9539 48.4513 64.6486 43.801 69.2721C42.9111 70.1584 42.6775 71.1487 42.5784 72.3185C42.0008 79.1938 39.9997 85.6982 36.9673 91.8402C35.5965 94.6139 33.6646 97.1264 31.8445 99.6545C30.4368 101.606 28.6568 103.294 27.3089 105.28C24.1115 109.995 20.5478 114.392 16.5836 118.473C15.7276 119.354 14.758 120.183 14.7974 121.596C16.9753 122.09 18.9026 118.949 21.2715 121.402ZM39.2482 68.2597C39.5679 64.1759 38.0702 60.9986 36.4655 57.826C35.4658 55.8461 33.9911 54.4266 32.0565 53.394C29.8573 52.2191 27.9763 52.317 26.2789 54.1209C25.1273 55.343 23.9581 56.7334 23.3793 58.2672C22.5884 60.3664 22.0613 62.8243 23.0518 64.9097C24.4377 67.8262 26.7163 70.0049 30.304 69.9336C33.2738 69.877 36.196 69.4649 39.2482 68.2597Z"
-                        fill="#76717F"
-                        stroke="#76717F"
-                        stroke-width="0.5"
-                        class="d101o"
-                      />
-                    </svg>
-                  </div>
+                    <path
+                      id="arrowPath"
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M21.2715 121.402C20.9656 121.843 20.7603 122.451 20.3456 122.675C19.2321 123.278 18.0663 124.015 16.8539 124.163C12.7504 124.664 9.46105 126.927 5.97751 128.799C5.11012 129.264 4.24702 129.78 3.31794 130.079C2.6821 130.285 1.93451 130.225 1.24601 130.164C0.57884 130.108 0.0311324 129.12 0.331698 128.533C0.650394 127.911 1.03298 127.309 1.46627 126.765C2.79557 125.097 4.24057 123.516 5.49143 121.793C6.91306 119.838 8.10279 117.744 8.36883 115.244C8.47112 114.284 9.05975 113.698 10.0976 113.784C11.2008 113.876 11.9184 114.768 11.6632 115.864C11.3731 117.103 10.9338 118.303 10.5545 119.534C11.3617 120.243 11.8157 119.489 12.2747 119.076C17.0699 114.776 20.8326 109.606 24.5754 104.42C26.2336 102.124 27.8484 99.7852 29.6346 97.59C33.1661 93.2494 36.0019 88.5701 37.3652 83.084C38.0154 80.4669 38.7709 77.8765 39.3822 75.2526C39.6617 74.0515 39.7055 72.7942 39.8904 71.2734C36.8547 71.7014 34.2004 72.1187 31.5337 72.4414C26.708 73.0253 21.5987 70.0913 20.2954 65.7683C18.3052 59.1543 20.4846 53.4362 27.1864 50.2748C28.9448 49.4455 30.8539 49.8285 32.5887 50.5072C34.7287 51.3428 36.5653 52.6243 37.8703 54.6301C39.4286 57.0321 40.7645 59.5013 41.3754 62.3296C41.6368 63.5386 42.0458 64.7159 42.4955 66.2876C43.1787 65.6863 43.632 65.4024 43.9386 65.0057C49.7961 57.4425 52.7139 48.7615 52.7134 39.3011C52.7141 30.6057 50.1567 22.5366 45.0679 15.3332C42.696 11.9781 40.567 8.4467 38.4023 4.94749C37.8175 4.00033 37.4527 2.89917 37.1088 1.82978C37.0113 1.53018 37.2783 0.827138 37.507 0.763854C37.9744 0.632407 38.5748 0.699195 39.0323 0.892172C39.3774 1.03819 39.6312 1.47847 39.8524 1.83148C42.6284 6.27698 45.3814 10.7373 48.1599 15.1803C55.5246 26.9526 57.14 39.4939 53.1415 52.757C51.2733 58.9539 48.4513 64.6486 43.801 69.2721C42.9111 70.1584 42.6775 71.1487 42.5784 72.3185C42.0008 79.1938 39.9997 85.6982 36.9673 91.8402C35.5965 94.6139 33.6646 97.1264 31.8445 99.6545C30.4368 101.606 28.6568 103.294 27.3089 105.28C24.1115 109.995 20.5478 114.392 16.5836 118.473C15.7276 119.354 14.758 120.183 14.7974 121.596C16.9753 122.09 18.9026 118.949 21.2715 121.402ZM39.2482 68.2597C39.5679 64.1759 38.0702 60.9986 36.4655 57.826C35.4658 55.8461 33.9911 54.4266 32.0565 53.394C29.8573 52.2191 27.9763 52.317 26.2789 54.1209C25.1273 55.343 23.9581 56.7334 23.3793 58.2672C22.5884 60.3664 22.0613 62.8243 23.0518 64.9097C24.4377 67.8262 26.7163 70.0049 30.304 69.9336C33.2738 69.877 36.196 69.4649 39.2482 68.2597Z"
+                      fill="#76717F"
+                      stroke="#76717F"
+                      stroke-width="0.5"
+                      class="d101o"
+                    />
+                  </svg>
                 </div>
               </div>
             </div>
@@ -675,7 +976,6 @@
                     Instant Flight Deals
                   </h5>
                 </div>
-
                 <div
                   class="l8ryx intersect-once intersect:motion-preset-slide-up intersect:motion-duration-800 intersect:motion-opacity-in-0 intersect:motion-delay-1900 absolute start-[4%] top-[66%] hidden rotate-[11deg] rounded-full e6j53 py-2 lg:block xl:start-[8%]"
                 >
@@ -683,7 +983,6 @@
                     Airtime and Data Top-Up
                   </h5>
                 </div>
-
                 <div
                   class="r1nc2 intersect-once intersect:motion-preset-slide-up intersect:motion-duration-800 intersect:motion-opacity-in-0 intersect:motion-delay-2100 absolute end-[8%] top-[20%] hidden rotate-[13deg] rounded-full e6j53 py-2 lg:block xl:end-[12%]"
                 >
@@ -691,13 +990,11 @@
                     Pay Electricity Bills
                   </h5>
                 </div>
-
                 <div
                   class="hly7r intersect-once intersect:motion-preset-slide-up intersect:motion-duration-800 intersect:motion-opacity-in-0 intersect:motion-delay-2300 absolute end-[4%] top-[66%] hidden rotate-[-11deg] rounded-full e6j53 py-2 lg:block xl:end-[8%]"
                 >
                   <h5 class="text-base-content itvoh j05ae">Secure Payments</h5>
                 </div>
-
                 <img
                   src="./assets/images/mockup-device-1.png"
                   alt="Bopadi App Interface"
@@ -719,28 +1016,24 @@
                     <span
                       class="icon-[tabler--sparkles] qe1ig fjiw5 shrink-0"
                     ></span>
-
                     <h5 class="fjiw5 text-nowrap ehpxe yx8fg">
                       Buy Airtime and Data Instantly
                     </h5>
                     <span
                       class="icon-[tabler--sparkles] qe1ig fjiw5 shrink-0"
                     ></span>
-
                     <h5 class="fjiw5 text-nowrap ehpxe yx8fg">
                       Pay Electricity and Cable Bills
                     </h5>
                     <span
                       class="icon-[tabler--sparkles] qe1ig fjiw5 shrink-0"
                     ></span>
-
                     <h5 class="fjiw5 text-nowrap ehpxe yx8fg">
                       Your Padi Is Always Online
                     </h5>
                     <span
                       class="icon-[tabler--sparkles] qe1ig fjiw5 shrink-0"
                     ></span>
-
                     <h5 class="fjiw5 text-nowrap ehpxe yx8fg">
                       Chat, Pay and Go
                     </h5>
@@ -760,57 +1053,57 @@
             class="bg-base-100 bg-[url('../../img/mobile-app-landing-page/layer-blur-2.png')] p2k6d y5c3w gn2e2 sm:py-16 lg:py-24"
           >
             <div class="max-w-[1280px] bd5zv e6j53 sm:px-6 lg:px-8">
-              <!-- Main Content Section -->
               <div
                 class="lg:gap-22 fhy6t items-center n7j2b lg:grid-cols-2 xl:gap-44"
               >
                 <!-- Left Column -->
                 <div class="x21h2">
                   <div>
-                    <span
-                      class="badge badge-soft badge-primary intersect-once intersect:motion-preset-slide-right-md intersect:motion-duration-800 intersect:motion-opacity-in-0 rounded-full"
-                    >
+                    <span class="badge badge-soft badge-primary rounded-full">
                       About Us
                     </span>
                   </div>
 
-                  <h2
-                    class="fpocx intersect-once intersect:motion-preset-slide-right-md intersect:motion-duration-800 intersect:motion-opacity-in-0 intersect:motion-delay-300 ehpxe md:text-3xl lg:text-4xl"
-                  >
+                  <h2 class="fpocx ehpxe md:text-3xl lg:text-4xl">
                     Built for Nigerians Who Love Simplicity and Speed
                   </h2>
 
-                  <p
-                    class="text-base-content/80 intersect-once intersect:motion-preset-slide-right-md intersect:motion-duration-800 intersect:motion-opacity-in-0 intersect:motion-delay-600 ehpxe"
-                  >
+                  <p class="text-base-content/80 ehpxe">
                     <strong>Bopadi</strong> (short for <em>Booking Padi</em>) is
                     your friendly WhatsApp assistant. We make it easy for anyone
                     to <strong>book flights and pay utility bills (VTU)</strong>
-                    directly through chat, no apps, no stress. From airtime
-                    top-ups to electricity payments and flight bookings, our
-                    mission is simple: to bring seamless services to every phone
-                    in Nigeria and beyond.
+                    directly through chat, no apps, no stress.
                   </p>
 
-                  <a
-                    href="#features"
-                    class="btn btn-primary eficd u60zw rounded-field intersect-once intersect:motion-preset-slide-right-md intersect:motion-duration-800 intersect:motion-opacity-in-0 intersect:motion-delay-900"
-                  >
-                    Check Out Our Features
-                    <span
-                      class="icon-[tabler--arrow-right] size-5 rtl:rotate-180"
-                    ></span>
-                  </a>
+                  <!-- ✅ FIXED BUTTONS -->
+                  <div class="flex flex-col sm:flex-row gap-3 mt-4 w-full">
+                    <a
+                      href="#features"
+                      class="btn btn-primary w-full sm:w-auto rounded-none flex items-center justify-center gap-2"
+                    >
+                      Check Out Our Features
+                      <span
+                        class="icon-[tabler--arrow-right] size-5 rtl:rotate-180"
+                      ></span>
+                    </a>
+
+                    <a
+                      href="https://wa.me/message/7XF4HGO5TSRAP1"
+                      target="_blank"
+                      class="btn btn-primary w-full rounded-none flex items-center justify-center gap-2 sm:hidden"
+                    >
+                      <img src="./assets/images/whatsapp.png" class="w-5 h-5" />
+                      Start on WhatsApp
+                    </a>
+                  </div>
                 </div>
 
                 <!-- Right Column -->
-                <div
-                  class="intersect-once intersect:motion-preset-slide-left-md intersect:motion-duration-800 intersect:motion-opacity-in-0 intersect:motion-delay-1100"
-                >
+                <div>
                   <img
                     src="./assets/images/about.png"
                     alt="Bopadi Team Illustration"
-                    class="imk2a w-full"
+                    class="w-full"
                   />
                 </div>
               </div>
@@ -822,7 +1115,6 @@
         <section id="features">
           <div class="bg-base-100 gn2e2 sm:py-16 lg:py-24">
             <div class="max-w-[1280px] bd5zv e6j53 sm:px-6 lg:px-8">
-              <!-- Hero Section -->
               <div class="xc5f6 x21h2 text-center sm:mb-16 lg:mb-24">
                 <div>
                   <span
@@ -848,13 +1140,22 @@
                   Bopadi makes life simple, book flights and pay all your
                   utility bills instantly, all in one WhatsApp chat.
                 </p>
+                <!-- Features CTA -->
+                <!-- <div class="flex justify-center mt-6">
+                  <a
+                    href="https://wa.me/message/7XF4HGO5TSRAP1"
+                    target="_blank"
+                    class="btn btn-primary w-full sm:w-auto flex items-center justify-center gap-2"
+                  >
+                    <img src="./assets/images/whatsapp.png" class="w-5 h-5" />
+                    Try All Features on WhatsApp
+                  </a>
+                </div> -->
               </div>
 
-              <!-- Feature Section -->
               <div class="fhy6t items-center dt68u xl:grid-cols-3">
                 <!-- feature left -->
                 <div class="flex flex-col items-center j0j4s md:items-end">
-                  <!-- Flight Booking -->
                   <div
                     class="intersect-once intersect:motion-preset-slide-right-md intersect:motion-duration-800 intersect:motion-opacity-in-0 intersect:motion-delay-900 border-base-content/20 rounded-field flex items-center gap-4 border ar7to"
                   >
@@ -873,8 +1174,6 @@
                       <span class="icon-[tabler--plane-tilt] size-8"></span>
                     </div>
                   </div>
-
-                  <!-- Airtime & Data -->
                   <div
                     class="intersect-once intersect:motion-preset-slide-right-md intersect:motion-duration-800 intersect:motion-opacity-in-0 intersect:motion-delay-1100 border-base-content/20 rounded-field flex items-center gap-4 border ar7to"
                   >
@@ -893,8 +1192,6 @@
                       <span class="icon-[tabler--device-mobile] size-8"></span>
                     </div>
                   </div>
-
-                  <!-- Electricity Bills -->
                   <div
                     class="intersect-once intersect:motion-preset-slide-right-md intersect:motion-duration-800 intersect:motion-opacity-in-0 intersect:motion-delay-1300 border-base-content/20 rounded-field flex items-center gap-4 border ar7to"
                   >
@@ -903,8 +1200,8 @@
                         Electricity Bills
                       </h5>
                       <p class="text-base-content/80 text-sm">
-                        Pay your electricity NEPA prepaid and postpaid
-                        bills quickly and securely.
+                        Pay your electricity NEPA prepaid and postpaid bills
+                        quickly and securely.
                       </p>
                     </div>
                     <div
@@ -915,7 +1212,7 @@
                   </div>
                 </div>
 
-                <!-- feature center (mockup image) -->
+                <!-- feature center -->
                 <div
                   class="intersect-once intersect:motion-preset-expand intersect:motion-duration-900 intersect:motion-opacity-in-0 intersect:motion-delay-800"
                 >
@@ -928,7 +1225,6 @@
 
                 <!-- feature right -->
                 <div class="j0j4s">
-                  <!-- WhatsApp Booking -->
                   <div
                     class="intersect-once intersect:motion-preset-slide-left-md intersect:motion-duration-800 intersect:motion-opacity-in-0 intersect:motion-delay-900 border-base-content/20 rounded-field flex items-center gap-4 border ar7to"
                   >
@@ -947,8 +1243,6 @@
                       </p>
                     </div>
                   </div>
-
-                  <!-- Cable TV -->
                   <div
                     class="intersect-once intersect:motion-preset-slide-left-md intersect:motion-duration-800 intersect:motion-opacity-in-0 intersect:motion-delay-1100 border-base-content/20 rounded-field flex items-center gap-4 border ar7to"
                   >
@@ -967,8 +1261,6 @@
                       </p>
                     </div>
                   </div>
-
-                  <!-- Secure Payments -->
                   <div
                     class="intersect-once intersect:motion-preset-slide-left-md intersect:motion-duration-800 intersect:motion-opacity-in-0 intersect:motion-delay-1300 border-base-content/20 rounded-field flex items-center gap-4 border ar7to"
                   >
@@ -998,7 +1290,6 @@
           <div class="dv6pf tvpsu m3w8p ud2ua gn2e2 sm:py-16 lg:py-24">
             <div class="max-w-[1280px] bd5zv e6j53 sm:px-6 lg:px-8">
               <div class="flex flex-col items-center t7y1e">
-                <!-- Main Content Section -->
                 <div class="fhy6t mm9gc lg:grid-cols-2">
                   <!-- Left Column -->
                   <div class="flex flex-col xlo5x">
@@ -1042,7 +1333,6 @@
                           apps.
                         </p>
                       </div>
-
                       <div
                         class="intersect-once intersect:motion-preset-blur-down-md intersect:motion-duration-800 intersect:motion-opacity-in-0 intersect:motion-delay-800 flex gap-3"
                       >
@@ -1057,7 +1347,6 @@
                           whenever you need it, day or night.
                         </p>
                       </div>
-
                       <div
                         class="intersect-once intersect:motion-preset-blur-down-md intersect:motion-duration-800 intersect:motion-opacity-in-0 intersect:motion-delay-1000 flex gap-3"
                       >
@@ -1073,7 +1362,6 @@
                           on every transaction.
                         </p>
                       </div>
-
                       <div
                         class="intersect-once intersect:motion-preset-blur-down-md intersect:motion-duration-800 intersect:motion-opacity-in-0 intersect:motion-delay-1200 flex gap-3"
                       >
@@ -1088,6 +1376,21 @@
                           everything happens in one chat, fast, smooth, and
                           friendly.
                         </p>
+                      </div>
+
+                      <!-- Benefits CTA -->
+
+                      <div
+                        class="intersect-once intersect:motion-preset-blur-down-md intersect:motion-duration-800 intersect:motion-opacity-in-0 intersect:motion-delay-1400 pt-2"
+                      >
+                        <a
+                          href="https://wa.me/message/7XF4HGO5TSRAP1"
+                          target="_blank"
+                          class="btn btn-primary w-full sm:w-auto rounded-none flex items-center justify-center gap-2"
+                        >
+                          
+                          Get Started on WhatsApp
+                        </a>
                       </div>
                     </div>
                   </div>
@@ -1105,9 +1408,8 @@
                       <div
                         class="s26dm dguzu md:size-70 absolute fs4jw top-1/2 yj7lw yeknw rounded-full xl:size-80"
                       ></div>
-                      <!-- Illustration -->
                       <img
-                        src="./assets/images/benefits_hero.png"
+                        src="./assets/images/about-image.png"
                         alt="Bopadi WhatsApp Booking Illustration"
                         class="intersect-once intersect:motion-preset-fade-md intersect:motion-duration-800 intersect:motion-delay-1250 smkvv md:h-85 xl:h-104 absolute fs4jw top-[44%] dtl21 yj7lw yeknw rounded-b-[80px]"
                       />
@@ -1123,7 +1425,6 @@
         <section id="faqs">
           <div class="bg-base-100 gn2e2 sm:py-16 lg:py-24">
             <div class="max-w-[1280px] bd5zv e6j53 sm:px-6 lg:px-8">
-              <!-- FAQ Header -->
               <div class="xc5f6 x21h2 text-center sm:mb-16 lg:mb-24">
                 <div>
                   <span
@@ -1145,9 +1446,7 @@
                 </p>
               </div>
 
-              <!-- FAQ Accordion -->
               <div class="accordion liv0n w-full gufsh">
-                <!-- 1 -->
                 <div
                   class="accordion-item active intersect-once intersect:motion-preset-blur-up intersect:motion-duration-300 intersect:motion-opacity-0 intersect:motion-delay-1100"
                   id="faq-1"
@@ -1184,7 +1483,6 @@
                   </div>
                 </div>
 
-                <!-- 2 -->
                 <div
                   class="accordion-item intersect-once intersect:motion-preset-blur-up intersect:motion-duration-300 intersect:motion-opacity-0 intersect:motion-delay-1300"
                   id="faq-2"
@@ -1219,7 +1517,6 @@
                   </div>
                 </div>
 
-                <!-- 3 -->
                 <div
                   class="accordion-item intersect-once intersect:motion-preset-blur-up intersect:motion-duration-300 intersect:motion-opacity-0 intersect:motion-delay-1500"
                   id="faq-3"
@@ -1256,7 +1553,6 @@
                   </div>
                 </div>
 
-                <!-- 4 -->
                 <div
                   class="accordion-item intersect-once intersect:motion-preset-blur-up intersect:motion-duration-300 intersect:motion-opacity-0 intersect:motion-delay-1700"
                   id="faq-4"
@@ -1291,7 +1587,6 @@
                   </div>
                 </div>
 
-                <!-- 5 -->
                 <div
                   class="accordion-item intersect-once intersect:motion-preset-blur-up intersect:motion-duration-300 intersect:motion-opacity-0 intersect:motion-delay-1900"
                   id="faq-5"
@@ -1328,11 +1623,30 @@
                   </div>
                 </div>
               </div>
+
+              <!-- FAQ Bottom CTA -->
+              <div
+                class="faq-cta-block intersect-once intersect:motion-preset-blur-up intersect:motion-duration-300 intersect:motion-opacity-0 intersect:motion-delay-2100"
+              >
+                <p class="text-base-content/70">
+                  Ready to get started? It takes less than 30 seconds. 🚀
+                </p>
+                <a
+                  href="https://wa.me/message/7XF4HGO5TSRAP1"
+                  target="_blank"
+                  class="wa-cta-btn"
+                >
+                  <img src="./assets/images/whatsapp.png" alt="WhatsApp" />
+                  Chat with Bopadi Now
+                </a>
+              </div>
             </div>
           </div>
         </section>
       </main>
+
       <div class="crmfv"></div>
+
       <!-- Footer -->
       <footer>
         <div
@@ -1362,8 +1676,6 @@
                 >Data Deletion</a
               >
             </nav>
-
-            <!-- Social Icons -->
             <div class="text-base-content flex snwcg gap-4">
               <a
                 href="https://www.facebook.com/profile.php?id=61582320794277"
@@ -1389,19 +1701,41 @@
             </div>
           </div>
         </div>
-
         <div class="crmfv"></div>
       </footer>
     </div>
 
+    <!-- ── FAB: Join WhatsApp Group ── -->
+    <div class="fab-whatsapp">
+      <span class="fab-tooltip">Join our WhatsApp Group</span>
+      <a
+        href="https://chat.whatsapp.com/BypjH22ZkBw6ZKYszy1PNu"
+        target="_blank"
+        class="fab-btn-wrap"
+        aria-label="Join Bopadi WhatsApp Group"
+      >
+        <div class="fab-btn">
+          <img src="./assets/images/whatsapp.png" alt="WhatsApp Group" />
+        </div>
+        <span class="fab-badge">GRP</span>
+      </a>
+    </div>
+
+    <button
+      id="scrollToTopBtn"
+      class="btn btn-circle btn-soft btn-secondary/20 j0x7m i3w89 w5xlu v53cv cwegy fixed absolute z-[3] hidden"
+      aria-label="Circle Soft Icon Button"
+    >
+      <span class="icon-[tabler--chevron-up] size-5 shrink-0"></span>
+    </button>
+
     <!-- Axios -->
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-
     <!-- SweetAlert2 -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     <script>
       const modal = document.getElementById("waitlistModal");
-      const openBtn = document.getElementById("openModalBtn");
       const closeBtn = document.getElementById("closeModalBtn");
       const form = document.getElementById("waitlistForm");
       const submitBtn = document.getElementById("waitlistBtn");
@@ -1410,7 +1744,6 @@
 
       window.API_URL = "https://waitlist.bopadi.app/api";
 
-      if (openBtn) openBtn.onclick = () => (modal.style.display = "flex");
       closeBtn.onclick = () => (modal.style.display = "none");
       window.onclick = (e) => {
         if (e.target === modal) modal.style.display = "none";
@@ -1432,31 +1765,25 @@
 
       form.addEventListener("submit", async (e) => {
         e.preventDefault();
-
         const name = document.getElementById("name").value.trim();
         const email = document.getElementById("email").value.trim();
         const phone = document.getElementById("phone").value.trim();
-
         btnText.style.display = "none";
         loader.style.display = "inline-block";
         submitBtn.disabled = true;
-
         try {
           const res = await axios.post(`${window.API_URL}/waitlist/join`, {
             name,
             email,
             phone,
           });
-
           modal.style.display = "none";
           form.reset();
           showToast("You've joined the waitlist!", "success");
         } catch (err) {
-          console.error(err);
           const status = err.response?.status;
           const msg =
             err.response?.data?.message || "Something went wrong. Try again!";
-
           if (status === 409) {
             Swal.fire({
               toast: true,
@@ -1469,7 +1796,6 @@
               background: "#1a1a1a",
               color: "#fff",
             });
-
             modal.style.display = "none";
             form.reset();
           } else {
@@ -1484,54 +1810,35 @@
         }
       });
     </script>
-    <!-- Vendors JS -->
+
     <script src="./assets/js/tailwind_observer.js"></script>
-
-    <!-- Main JS -->
     <script src="./assets/js/main.js"></script>
-
-    <!-- Page JS -->
     <script src="./assets/js/mobile_btn.js"></script>
 
-    <button
-      id="scrollToTopBtn"
-      class="btn btn-circle btn-soft btn-secondary/20 j0x7m i3w89 w5xlu v53cv cwegy fixed absolute z-[3] hidden"
-      aria-label="Circle Soft Icon Button"
-    >
-      <span class="icon-[tabler--chevron-up] size-5 shrink-0"></span>
-    </button>
-    <!-- Theme Toggle JS -->
     <script>
       (function () {
         const DARK = "corporate-dark";
         const LIGHT = "corporate-light";
         const html = document.documentElement;
-
-        // Apply saved theme on load (default: dark)
         const saved = localStorage.getItem("bopadi-theme") || DARK;
         html.setAttribute("data-theme", saved);
-
         function syncIcons(theme) {
           const isDark = theme === DARK;
-          // Desktop
           const sunD = document.getElementById("themeIconSun");
           const moonD = document.getElementById("themeIconMoon");
           if (sunD) sunD.style.display = isDark ? "" : "none";
           if (moonD) moonD.style.display = isDark ? "none" : "";
-          // Mobile
           const sunM = document.getElementById("themeIconSunMobile");
           const moonM = document.getElementById("themeIconMoonMobile");
           if (sunM) sunM.style.display = isDark ? "" : "none";
           if (moonM) moonM.style.display = isDark ? "none" : "";
         }
-
         function toggle() {
           const next = html.getAttribute("data-theme") === DARK ? LIGHT : DARK;
           html.setAttribute("data-theme", next);
           localStorage.setItem("bopadi-theme", next);
           syncIcons(next);
         }
-
         document.addEventListener("DOMContentLoaded", function () {
           syncIcons(html.getAttribute("data-theme"));
           document
